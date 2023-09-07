@@ -5,7 +5,7 @@
  * main - Entry point
  *
  * Description: 'Hello, puts'
- * @parameter: 0
+ * @main: 0
  *
  * Return: Always 0 (Success)
  */
