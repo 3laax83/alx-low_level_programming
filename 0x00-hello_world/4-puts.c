@@ -3,10 +3,10 @@
 
 /**
  * main - Entry point
- * 
+ *
  * Description: 'Hello, puts'
  * @parameter: 0
- * 
+ *
  * Return: Always 0 (Success)
  */
 
