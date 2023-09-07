@@ -1,7 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
-/* main function */
+/**
+ * main - Entry point
+ * 
+ * Description: 'Hello, puts'
+ * @parameter: 0
+ * 
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
