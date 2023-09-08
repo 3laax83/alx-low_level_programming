@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
- * main - a program that prints all possible combinations of single-digit numbers
+ * main - a program that prints all possible
+ * combinations of single-digit numbers
  *
- * Description: Numbers must be separated by , followed by a space
- * Numbers should be printed in ascending order
+ * Description: Numbers must be separated by
+ * , followed by a space  Numbers should be
+ * printed in ascending order
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int num;
