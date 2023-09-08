@@ -24,8 +24,6 @@ int main(void)
 	{
 	if (num1 <= num3 && num2 < num4)
 	{
-	if (num3 <= num4)
-	{
 	putchar(num1 + '0');
 	putchar(num2 + '0');
 	putchar(' ');
@@ -35,7 +33,6 @@ int main(void)
 	{
 	putchar(',');
 	putchar(' ');
-	}
 	}
 	}
 	}
