@@ -22,7 +22,7 @@ int main(void)
 	{
 	for (num4 = 0; num4 <= 9; ++num4)
 	{
-	if (num1 <= num3 && num2 < num4)
+	if (num1 <= num3 && num2 <= num4)
 	{
 	putchar(num1 + '0');
 	putchar(num2 + '0');
