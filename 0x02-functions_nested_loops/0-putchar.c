@@ -12,8 +12,9 @@ int main(void)
 {
 	char output[] = "_putchar";
 	int counter;
+	int size = sizeof(output)/sizeof(char);
 
-	for (counter = 0; counter <= sizeof(output)/sizeof(char); ++counter)
+	for (counter = 0; counter <= size; ++counter)
 	{
 	_putchar(output[counter]);
 	}
