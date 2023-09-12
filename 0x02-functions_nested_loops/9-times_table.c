@@ -23,7 +23,7 @@ void times_table(void)
 	else
 	_putchar(' ');
 	_putchar('0' + counter1*counter2 % 10);
-	if (counter2 != 9 && counter2 !=0)
+	if (counter2 != 9)
 	_putchar(',');
 	_putchar(' ');
 	}
