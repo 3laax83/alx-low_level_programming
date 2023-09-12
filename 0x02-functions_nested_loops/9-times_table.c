@@ -20,7 +20,8 @@ void times_table(void)
 	for (counter2 = 0; counter2 <= 9; ++counter2)
 	{
 	result = '0' + counter1*counter2;
-	_putchar(result[0]);
+	_putchar(result / 10);
+	_putchar(result % 10);
 	_putchar(',');
 	_putchar(' ');
 	}
