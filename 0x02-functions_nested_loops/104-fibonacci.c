@@ -17,7 +17,7 @@ void fibonacci(int num)
 	num1 = 1;
 	num2 = 2;
 	printf("1, 2, ");
-	while (num > 2)
+	while (num > 0)
 	{
 	printf("%ld", num1 + num2);
 	if (num > 3)
