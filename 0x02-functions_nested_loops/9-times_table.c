@@ -18,8 +18,8 @@ void times_table(void)
 	{
 	for (counter2 = 0; counter2 <= 9; ++counter2)
 	{
-	result = counter1*counter2;
-	_putchar('0' + result);
+	result = '0' + counter1*counter2;
+	_putchar(result);
 	_putchar(',');
 	_putchar(' ');
 	}
