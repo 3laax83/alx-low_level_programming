@@ -21,21 +21,21 @@ void fibonacci()
 	num2 = num2 + num1;
 	num1 = num2 - num1;
 	}
-	num1h1 = num1 / 100000000;
-	num2h1 = num2 / 100000000;
-	num1h2 = num1 % 100000000;
-	num2h2 = num2 % 100000000;
-	for (counter = 93; counter <= 98; ++counter)
+	num1h1 = num1 / 1000000000;
+	num2h1 = num2 / 1000000000;
+	num1h2 = num1 % 1000000000;
+	num2h2 = num2 % 1000000000;
+	for (counter; counter < 98; counter++)
 	{
 	half1 = num1h1 + num2h1;
 	half2 = num1h2 + num2h2;
-	if (half2 >= 100000000)
+	if (half2 >= 1000000000)
 	{
 	++half1;
-	half2 = half2 % 100000000;
+	half2 = half2 % 1000000000;
 	}
 	printf("%lu%lu", half1, half2);
-	if (counter != 98)
+	if (counter != 97)
 	printf(", ");
 	num1h1 = num2h1;
 	num1h2 = num2h2;
