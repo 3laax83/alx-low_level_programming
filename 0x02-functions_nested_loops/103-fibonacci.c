@@ -23,7 +23,6 @@ void fibonacci(void)
 	placeholder = num2;
 	num2 = num1 + num2;
 	num1 = placeholder;
-	--num;
 	}
 	printf("%ld\n", sum);
 }
