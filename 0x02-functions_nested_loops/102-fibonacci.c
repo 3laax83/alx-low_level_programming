@@ -11,18 +11,18 @@
  */
 void fibonacci(int num)
 {
-	int num1, num2, placeholder, counter;
-	counter = 0;
+	int num1, num2, placeholder;
 	num1 = 1;
 	num2 = 2;
 
 	printf("1, 2, ");
-	while (counter <= num)
+	while (num > 0)
 	{
 	printf("%d, ", num1 + num2);
 	placeholder = num2;
 	num2 = num1 + num2;
 	num1 = placeholder;
+	--num;
 	}
 }
 /**
