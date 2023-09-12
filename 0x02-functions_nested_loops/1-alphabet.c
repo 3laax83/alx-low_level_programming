@@ -3,7 +3,7 @@
 /**
  * print_alphabet
  *
- * Description - prints the alphabet
+ * Description: prints the alphabet
  *
  * Return : None.
  */
