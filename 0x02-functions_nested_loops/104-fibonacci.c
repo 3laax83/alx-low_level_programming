@@ -17,7 +17,7 @@ void fibonacci(int num)
 	num1 = 1;
 	num2 = 2;
 	printf("1, 2, ");
-	while (num > 0)
+	while (num > 2)
 	{
 	printf("%ld", num1 + num2);
 	if (num > 3)
@@ -36,6 +36,6 @@ void fibonacci(int num)
  */
 int main(void)
 {
-	fibonacci(98);
+	fibonacci(96);
 	return (0);
 }
