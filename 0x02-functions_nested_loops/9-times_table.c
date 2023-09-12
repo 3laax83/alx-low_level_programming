@@ -18,11 +18,11 @@ void times_table(void)
 	{
 	for (counter2 = 0; counter2 <= 9; ++counter2)
 	{
-	if (counter1*counter2 <= 9 && counter2 != 0)
+	if (counter1 * counter2 <= 9 && counter2 != 0)
 	_putchar(' ');
-	else if (counter1*counter2 > 9)
-	_putchar('0' + counter1*counter2 / 10);
-	_putchar('0' + counter1*counter2 % 10);
+	else if (counter1 * counter2 > 9)
+	_putchar('0' + counter1 * counter2 / 10);
+	_putchar('0' + counter1 * counter2 % 10);
 	if (counter2 != 9)
 	{
 	_putchar(',');
