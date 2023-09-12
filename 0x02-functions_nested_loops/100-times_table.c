@@ -5,7 +5,7 @@
  * print_times_table: prints table
  * @n: number
  *
- * Description:  prints the n times
+ * Description: prints the n times
  * table, starting with 0.
  *
  * Return: None.
@@ -23,8 +23,8 @@ void print_times_table(int n)
 	if (counter2 > 0 && (counter1 * counter2 < 100))
 	printf(" ");
 	if (counter2 > 0 && (counter1 * counter2 < 10))
-        printf(" ");
-	printf("%d", counter1*counter2);
+	printf(" ");
+	printf("%d", counter1 * counter2);
 	if (!(counter2 == n))
 	printf(", ");
 	}
