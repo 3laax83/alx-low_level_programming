@@ -15,7 +15,8 @@ void jack_bauer(void)
 
 	for (counter1 = 0; counter1 <=2; ++counter1)
 	{
-	if (counter1 == 2) maxlimit = 3;
+	if (counter1 == 2)
+	maxlimit2 = 3;
 	else maxlimit2 = 9;
 	for (counter2 = 0; counter2 <= maxlimit2; ++counter2)
 	{
