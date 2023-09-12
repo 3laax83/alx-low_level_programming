@@ -12,12 +12,12 @@ int main(void)
 {
 	char output[] = "_putchar";
 	int counter;
-	int size = sizeof(output)/sizeof(char);
+	int size = sizeof(output) / sizeof(char);
 
-	for (counter = 0; counter < size-1; ++counter)
+	for (counter = 0; counter < size - 1; ++counter)
 	{
 	_putchar(output[counter]);
 	}
 	_putchar('\n');
-	return 0;
+	return (0);
 }
