@@ -24,7 +24,7 @@ void fibonacci(void)
 	num2 = num1 + num2;
 	num1 = placeholder;
 	}
-	printf("%ld\n", sum);
+	printf("%ld\n", (sum + 1)/2);
 }
 /**
  * main - main
