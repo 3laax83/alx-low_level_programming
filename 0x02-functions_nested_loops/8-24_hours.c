@@ -26,11 +26,12 @@ void jack_bauer(void)
 	{
 	for (counter4 = 0; counter4 <= 9; ++counter4)
 	{
-	_putchar(counter1);
-	_putchar(counter2);
+	_putchar(counter1 + '0');
+	_putchar(counter2 + '0');
 	_putchar(':');
-	_putchar(counter3);
-	_putchar(counter4);
+	_putchar(counter3 + '0');
+	_putchar(counter4 + '0');
+	_putchar('\n')
 	}
 	}
 	}
