@@ -18,7 +18,7 @@ void fibonacci(int num)
 	printf("1, 2, ");
 	while (num > 0)
 	{
-	printf("%d, ", num1 + num2);
+	printf("%f, ", num1 + num2);
 	placeholder = num2;
 	num2 = num1 + num2;
 	num1 = placeholder;
