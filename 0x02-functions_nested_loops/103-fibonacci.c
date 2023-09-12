@@ -2,11 +2,9 @@
 #include <stdlib.h>
 /**
  * fibonacci - prints Fibonacci numbers
- * @num: number
  *
- * Description: prints the first 50
- * Fibonacci numbers, starting with 1
- * and 2.
+ * Description: prints the sum of the
+ * even-valued terms
  *
  * Return: None.
  */
@@ -24,7 +22,7 @@ void fibonacci(void)
 	num2 = num1 + num2;
 	num1 = placeholder;
 	}
-	printf("%ld\n", (sum + 1)/2);
+	printf("%ld\n", (sum + 1) / 2);
 }
 /**
  * main - main
