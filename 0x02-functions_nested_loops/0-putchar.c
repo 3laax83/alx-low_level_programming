@@ -14,7 +14,7 @@ int main(void)
 	int counter;
 	int size = sizeof(output)/sizeof(char);
 
-	for (counter = 0; counter < size; ++counter)
+	for (counter = 0; counter < size-1; ++counter)
 	{
 	_putchar(output[counter]);
 	}
