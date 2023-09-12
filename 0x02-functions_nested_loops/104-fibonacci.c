@@ -2,7 +2,6 @@
 #include <stdlib.h>
 /**
  * fibonacci - prints Fibonacci numbers
- * @num: number
  *
  * Description: prints the first 98
  * Fibonacci numbers, starting with 1
@@ -10,7 +9,7 @@
  *
  * Return: None.
  */
-void fibonacci()
+void fibonacci(void)
 {
 	unsigned long num1 = 1, num2 = 2, counter, num1h1, num1h2, num2h1, num2h2, half1, half2;
 
