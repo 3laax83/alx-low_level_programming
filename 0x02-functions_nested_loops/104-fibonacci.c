@@ -12,7 +12,7 @@
  */
 void fibonacci(int num)
 {
-	long unsigned int num1, num2, placeholder;
+	unsigned long int num1, num2, placeholder;
 
 	num1 = 1;
 	num2 = 2;
