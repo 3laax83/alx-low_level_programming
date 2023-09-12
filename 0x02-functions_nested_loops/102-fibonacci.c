@@ -11,14 +11,14 @@
  */
 void fibonacci(int num)
 {
-	double num1, num2, placeholder;
+	long int num1, num2, placeholder;
 	num1 = 1;
 	num2 = 2;
 
 	printf("1, 2, ");
 	while (num > 0)
 	{
-	printf("%f, ", num1 + num2);
+	printf("%d, ", num1 + num2);
 	placeholder = num2;
 	num2 = num1 + num2;
 	num1 = placeholder;
