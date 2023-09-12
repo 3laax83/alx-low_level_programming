@@ -11,7 +11,7 @@
  */
 void fibonacci(int num)
 {
-	int num1, num2, placeholder;
+	double num1, num2, placeholder;
 	num1 = 1;
 	num2 = 2;
 
