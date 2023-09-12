@@ -2,7 +2,7 @@
 #include <string.h>
 #include "main.h"
 /*
- * main - contains the main fuction.
+ * main - prints _putchar.
  *
  * Description - prints _putchar
  *
