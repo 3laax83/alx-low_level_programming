@@ -24,8 +24,10 @@ void times_table(void)
 	_putchar('0' + counter1*counter2 / 10);
 	_putchar('0' + counter1*counter2 % 10);
 	if (counter2 != 9)
+	{
 	_putchar(',');
 	_putchar(' ');
+	}
 	}
 	_putchar('\n');
 	}
