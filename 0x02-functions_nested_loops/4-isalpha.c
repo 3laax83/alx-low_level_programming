@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "_putchar.c"
 /*
- * Function : _isalpha
+ * _isalpha - checks if the letter
+ * is alpha
+ * @c: letter
  *
  * Description : checks for
  * alphabetic character
