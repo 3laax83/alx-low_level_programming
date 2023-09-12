@@ -11,7 +11,7 @@
  *
  * Return: None.
  */
-void fibonacci(unsigned long num)
+void fibonacci(num)
 {
 	unsigned long num1 = 1, num2 = 2, counter, num1h1, num1h2, num2h1, num2h2, half1, half2;
 
@@ -26,7 +26,7 @@ void fibonacci(unsigned long num)
 	num2h1 = num2 / 100000000;
 	num1h2 = num1 % 100000000;
 	num2h2 = num2 % 100000000;
-	for (counter = 93; counter <= 98; ++counter)
+	for (counter = 93; counter <= num; ++counter)
 	{
 	half1 = num1h1 + num2h1;
 	half2 = num1h2 + num2h2;
