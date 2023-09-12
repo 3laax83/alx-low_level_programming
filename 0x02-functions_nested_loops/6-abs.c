@@ -1,9 +1,11 @@
 #include <stdio.h>
-#include "_putchar.c"
+#include "main.h"
 /*
- * Function: _abs
+ * _abs - computes the absolute
+ * value of an integer.
+ * @num : number
  *
- * Description - computes the
+ * Description: computes the
  * absolute value an integer.
  *
  * Return : abs(int).
