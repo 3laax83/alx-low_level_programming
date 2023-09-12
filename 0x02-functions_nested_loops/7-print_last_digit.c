@@ -6,14 +6,14 @@
  * last digit of a number.
  * @num: number
  *
- * Description : prints the last
+ * Description: prints the last
  * digit of a number.
  *
- * Return : the value of the last
+ * Return: the value of the last
  * digit
  */
 int print_last_digit(int num)
 {
-	_putchar(abs(num%10) + '0');
-	return (abs(num%10));
+	_putchar( abs(num%10) + '0' );
+	return ( abs(num%10) );
 }
