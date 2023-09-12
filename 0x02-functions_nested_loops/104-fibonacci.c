@@ -25,7 +25,7 @@ void fibonacci()
 	num2h1 = num2 / 1000000000;
 	num1h2 = num1 % 1000000000;
 	num2h2 = num2 % 1000000000;
-	for (counter; counter < 98; counter++)
+	for (counter = 92; counter < 98; counter++)
 	{
 	half1 = num1h1 + num2h1;
 	half2 = num1h2 + num2h2;
