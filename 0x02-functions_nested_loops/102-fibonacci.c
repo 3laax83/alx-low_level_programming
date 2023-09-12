@@ -2,6 +2,7 @@
 #include <stdlib.h>
 /**
  * fibonacci - prints Fibonacci numbers
+ * @num: number
  *
  * Description: prints the first 50
  * Fibonacci numbers, starting with 1
