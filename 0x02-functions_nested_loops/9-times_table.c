@@ -20,7 +20,10 @@ void times_table(void)
 	{
 	if (counter1*counter2 > 9)
 	_putchar('0' + counter1*counter2 / 10);
+	else
+	_putchar(' ');
 	_putchar('0' + counter1*counter2 % 10);
+	if (counter2 != 9)
 	_putchar(',');
 	_putchar(' ');
 	}
