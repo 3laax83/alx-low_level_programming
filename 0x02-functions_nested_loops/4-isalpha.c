@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "_putchar.c"
-/*
+#include "main.h"
+/**
  * _isalpha - checks if the letter
  * is alpha
  * @c: letter
