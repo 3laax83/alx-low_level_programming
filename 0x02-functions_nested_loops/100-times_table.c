@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * print_times_table: prints table
+ * print_times_table - prints table
  * @n: number
  *
  * Description: prints the n times
