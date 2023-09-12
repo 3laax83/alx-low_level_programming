@@ -19,7 +19,7 @@ void fibonacci(int num)
 	printf("1, 2, ");
 	while (num > 2)
 	{
-	/*printf("%ld", num1 + num2);*/
+	printf("%ld", num1 + num2);
 	if (num > 3)
 	printf(", ");
 	placeholder = num2;
@@ -36,6 +36,6 @@ void fibonacci(int num)
  */
 int main(void)
 {
-	fibonacci(100);
+	fibonacci(98);
 	return (0);
 }
