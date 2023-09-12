@@ -20,3 +20,14 @@ void summation(void)
 	}
 	printf("%d\n", sum);
 }
+/**
+ * main - main
+ *
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+	summation();
+	return (0);
+}
