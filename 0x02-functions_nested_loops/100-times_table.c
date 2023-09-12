@@ -18,6 +18,10 @@ void print_times_table(int n)
 	{
 	for (counter2 = 0; counter2 <= n; ++counter2)
 	{
+	if (counter1 * counter2 < 100)
+	printf(" ");
+	if (counter1 * counter2 < 10)
+        printf(" ");
 	printf("%d", counter1*counter2);
 	if (!(counter2 == n))
 	printf(", ");
