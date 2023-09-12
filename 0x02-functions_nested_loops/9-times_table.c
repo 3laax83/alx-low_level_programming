@@ -13,7 +13,7 @@
 void times_table(void)
 {
 	int counter1, counter2;
-	char result;
+	char result[2];
 
 	for (counter1 = 0; counter1 <= 9; ++counter1)
 	{
