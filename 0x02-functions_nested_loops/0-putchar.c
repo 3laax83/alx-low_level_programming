@@ -4,7 +4,7 @@
 /*
  * main - prints _putchar.
  *
- * Description - prints _putchar
+ * Description: prints _putchar
  *
  * Return: return 0
 */
