@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "_putchar.c"
-/*
- * print_alphabet 
+/**
+ * print_alphabet
  *
  * Description - prints the alphabet
  *
- * Return : Always 0.
+ * Return : None.
  */
 void print_alphabet(void)
 {
