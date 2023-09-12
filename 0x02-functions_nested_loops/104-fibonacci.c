@@ -11,7 +11,7 @@
  *
  * Return: None.
  */
-void fibonacci(num)
+void fibonacci(int num)
 {
 	unsigned long num1 = 1, num2 = 2, counter, num1h1, num1h2, num2h1, num2h2, half1, half2;
 
