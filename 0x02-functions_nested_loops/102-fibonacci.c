@@ -26,6 +26,7 @@ void fibonacci(int num)
 	num1 = placeholder;
 	--num;
 	}
+	printf("\n");
 }
 /**
  * main - main
