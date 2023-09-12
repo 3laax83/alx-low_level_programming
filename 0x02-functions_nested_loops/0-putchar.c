@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include "main.h"
-/*
+/**
  * main - prints _putchar.
  *
  * Description: prints _putchar
  *
- * Return: return 0
+ * Return: 0 (Success)
 */
 int main(void)
 {
