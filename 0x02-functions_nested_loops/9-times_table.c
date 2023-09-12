@@ -13,15 +13,13 @@
 void times_table(void)
 {
 	int counter1, counter2;
-	char result[2];
 
 	for (counter1 = 0; counter1 <= 9; ++counter1)
 	{
 	for (counter2 = 0; counter2 <= 9; ++counter2)
 	{
-	result = '0' + counter1*counter2;
-	_putchar(result / 10);
-	_putchar(result % 10);
+	_putchar('0' + counter1*counter2 / 10);
+	_putchar('0' + counter1*counter2 % 10);
 	_putchar(',');
 	_putchar(' ');
 	}
