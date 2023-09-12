@@ -36,6 +36,6 @@ void fibonacci(int num)
  */
 int main(void)
 {
-	fibonacci(97);
+	fibonacci(99);
 	return (0);
 }
