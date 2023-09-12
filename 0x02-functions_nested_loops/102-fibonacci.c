@@ -16,9 +16,10 @@ void fibonacci(int num)
 	num1 = 1;
 	num2 = 2;
 
+	printf("1, 2, ");
 	while (counter <= num)
 	{
-	printf("%d", num1 + num2);
+	printf("%d, ", num1 + num2);
 	placeholder = num2;
 	num2 = num1 + num2;
 	num1 = placeholder;
