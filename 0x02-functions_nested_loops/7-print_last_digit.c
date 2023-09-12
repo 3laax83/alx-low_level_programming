@@ -1,7 +1,9 @@
 #include <stdio.h>
-#include "_putchar.c"
-/*
- * Function : print_last_digit
+#include "main.h"
+/**
+ * print_last_digit - prints the
+ * last digit of a number.
+ * @num: number
  *
  * Description : prints the last
  * digit of a number.
@@ -11,5 +13,5 @@
  */
 int print_last_digit(int num)
 {
-	return num%10;
+	return (num%10);
 }
