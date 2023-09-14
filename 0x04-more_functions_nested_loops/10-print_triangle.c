@@ -12,12 +12,17 @@ void print_triangle(int size)
 {
 	int counter1, counter2;
 
+	if (size > 0)
+	{
 	for (counter1 = size - 1; counter1 > 0; --counter1)
 	{
 		for (counter2 = 0; counter2 < counter1; ++counter2)
 			_putchar(' ');
 		for (counter2 = counter1; counter2 < size; ++counter2)
 			_putchar('#');
-		putchar('\n');
+		_putchar('\n');
 	}
+	}
+	else
+		_putchar('\n');
 }
