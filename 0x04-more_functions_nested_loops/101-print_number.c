@@ -13,7 +13,6 @@
 void print_number(int n)
 {
 	char strng[4];
-	int counter;
 
 	sprintf(strng, "%d", n);
 	printf(strng);
