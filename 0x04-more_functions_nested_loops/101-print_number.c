@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_number: printer function
+ * print_number - printer function
  * @n: number
  *
  * Description: prints an integer
@@ -13,8 +13,10 @@
 void print_number(int n)
 {
 	char strng[4];
+	int counter;
 
 	sprintf(strng, "%d", n);
-	printf(strng);
+	for (counter = 0; counter < 4; counter++)
+		_putchar('0' + string[counter]);
 	_putchar('\n');
 }
