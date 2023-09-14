@@ -12,9 +12,8 @@
 
 void print_number(int n)
 {
-	int num;
+	unsigned int num = n;
 
-	num = n;
 	if (n < 0)
 	{
 		_putchar(45);
@@ -23,5 +22,4 @@ void print_number(int n)
 	if (num / 10 >= 1)
 		print_number(num / 10);
 	_putchar('0' + num % 10);
-	_putchar('\n');
 }
