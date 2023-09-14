@@ -18,7 +18,7 @@ int main(void)
 	primary[0] = 2;
 	tobefactor = 612852475143;
 	max = 0;
-	for (number = 3; number <= 100000000; number+=2)
+	for (number = 3; number <= 100000000; number += 2)
 	{
 		if (tobefactor % number == 0)
 		{
