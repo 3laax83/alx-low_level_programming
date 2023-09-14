@@ -19,7 +19,8 @@ void print_diagonal(int n)
 		for (counter2 = 0; counter2 < counter1 - 1; ++counter2)
 			_putchar(' ');
 		_putchar('\\');
-		putchar('\n');
+		_putchar('\n');
 	}
 	}
+	_putchar('\n');
 }
