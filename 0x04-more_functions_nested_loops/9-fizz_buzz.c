@@ -29,7 +29,7 @@ int main(void)
 		}
 		else
 			printf("%d", counter);
-		if counter < 100
+		if (counter < 100)
 			printf(" ");
 	}
 	printf("\n");
