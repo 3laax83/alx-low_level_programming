@@ -35,4 +35,5 @@ int main(void)
 		}
 	}
 	printf("%ld\n", primary[max]);
+	return (0);
 }
