@@ -12,11 +12,14 @@
 
 void print_number(int n)
 {
-	char strng[4];
-	int counter;
+	int num;
 
-	sprintf(strng, "%d", n);
-	for (counter = 0; counter < 4; counter++)
-		_putchar('0' + string[counter]);
-	_putchar('\n');
+	if (n < 0)
+	{
+		_putchar(45);
+		num = -num;
+	}
+	if (num / 10 >= 1)
+		print_number (num / 10);
+	_putchar( '0' + num % 10);
 }
