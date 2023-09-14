@@ -16,5 +16,6 @@ void print_number(int n)
 	int counter;
 
 	sprintf(strng, "%d", n);
+	printf(strng);
 	_putchar('\n');
 }
