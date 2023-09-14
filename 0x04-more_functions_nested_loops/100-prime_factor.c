@@ -1,4 +1,6 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * main - main function
  *
@@ -8,6 +10,7 @@
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
 	long int primary[5], number, max, counter, tobefactor;
@@ -15,7 +18,7 @@ int main(void)
 	primary[0] = 2;
 	tobefactor = 612852475143;
 	max = 0;
-	for (number = 3; number <= 50829599; number+=2)
+	for (number = 3; number <= 100000000; number+=2)
 	{
 		if (tobefactor % number == 0)
 		{
