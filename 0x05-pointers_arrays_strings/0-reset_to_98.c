@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - an updater function.
- * @*n: pointer n.
+ * @n: pointer n.
  *
  * Description: a function that takes a
  * pointer to an int as parameter and
