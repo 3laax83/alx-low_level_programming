@@ -2,6 +2,8 @@
 
 /**
  * swap_int - updater function
+ * @a: pointer.
+ * @b: pointer.
  *
  * Description: a function that
  * swaps the values of two integers.

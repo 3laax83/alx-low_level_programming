@@ -2,6 +2,7 @@
 
 /**
  * _puts - printer function.
+ * @str: poniter to string.
  *
  * Description: a function that
  * prints a string, followed by
