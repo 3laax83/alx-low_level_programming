@@ -23,9 +23,11 @@ void puts_half(char *str)
 	}
 
 	if (length % 2 == 1)
-		++length;
+		counter = ((length - 1)/ 2);
+	else
+		counter = length / 2;
 
-	for (counter = (length / 2); counter < length; ++counter)
+	for (counter; counter < length; ++counter)
 	{
 		_putchar(str[counter]);
 	}
