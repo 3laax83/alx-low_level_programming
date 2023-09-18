@@ -12,17 +12,25 @@
 
 void rev_string(char *s)
 {
-	int length = sizeof(s) - 1;
 	int counter, counter2;
 	char temp;
+	int length = 0;
 
-	for (counter = 0; counter < length; ++counter)
+	while (length >= 0)
 	{
-		for (counter2 = counter; counter2 > 0; --counter2)
+		if (*(s + length) == '\0')
+			break;
+		length++;
+	}
+
+
+	for (counter = 0; counter < length - 1; ++counter)
+	{
+		for (counter2 = counter + 1; counter2 > 0; --counter2)
 		{
 			temp = *(s + counter2);
-			*(s + counter2) = *(s + (counter2 - 1));
-			*(s + (counter2 - 1)) = temp;
+			*(s + counter2) = *(s + abs(counter2 - 1));
+			*(s + abs(counter2 - 1)) = temp;
 		}
 	}
 }
