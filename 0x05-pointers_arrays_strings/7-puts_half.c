@@ -23,7 +23,7 @@ void puts_half(char *str)
 	}
 
 	if (length % 2 == 1)
-		counter = ((length - 1)/ 2);
+		counter = (length + 1)/ 2;
 	else
 		counter = length / 2;
 
