@@ -7,7 +7,7 @@
 #include <ctype.h>
 #include <math.h>
 #include <string.h>
-
+#include <time.h>
 
 int _putchar(char c);
 void reset_to_98(int *n);
