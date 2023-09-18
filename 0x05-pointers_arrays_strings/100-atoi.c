@@ -20,7 +20,7 @@ int _atoi(char *s)
 		if (size > 0 && (*(s + counter) < 48 || *(s + counter) > 57))
 			break;
 		if (*(s + counter) == '-')
-			sign = -1;
+			sign *= -1;
 		if (*(s + counter) >= 48 && *(s + counter) <= 57)
 		{
 			if (size > 0)
