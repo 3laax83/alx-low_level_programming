@@ -19,5 +19,8 @@ void print_array(int *a, int n)
 	for (; length < n; ++length)
 	{
 		_putchar(a[length]);
+		_putchar(',');
+		_putchar(' ');
 	}
+	_putchar('\n');
 }
