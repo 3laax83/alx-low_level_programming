@@ -14,6 +14,7 @@ int main(void)
 {
 	int password[32], counter1, counter2, sum = 0;
 
+	srand(time(NULL));
 	for (counter1 = 0; counter1 < 32; ++counter1)
 	{
 		password[counter1] = rand() % 78;
