@@ -27,7 +27,7 @@ char *leet(char *str)
 		counter = 0;
 		while (counter < 5)
 		{
-			if (*str == *(letter + counter) || *str == *(letter + counter) + 32)
+			if (*str == *(letter + counter) || *str == *(letter + counter) - 32)
 				*str = *(num + counter);
 			counter++;
 		}
