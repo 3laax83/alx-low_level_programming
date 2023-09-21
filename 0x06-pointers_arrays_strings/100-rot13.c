@@ -16,11 +16,13 @@ char *rot13(char *str)
 	char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int counter;
 
-	while (*str++)
+	for(; *str; str++)
 	{
 		for (counter = 0; counter < 52; counter++)
+		{
 			if (*(str + counter) == *(input + counter))
 				*(str + counter) = *(output + counter);
+		}
 	}
 	return (save);
 }
