@@ -18,8 +18,8 @@
 char *leet(char *str)
 {
 	char *save = str;
-	char letter[] = {'A', 'E', 'O', 'T', 'L'};
-	char num[] = {4, 3, 0, 7, 1};
+	char *letter = "aeotl";
+	char *num = "43071";
 	int counter;
 
 	while (*str++)
@@ -27,8 +27,8 @@ char *leet(char *str)
 		counter = 0;
 		while (counter < 5)
 		{
-			if (*str == letter[counter] || *str == letter[counter] + 32)
-				*str = num[counter] + '0';
+			if (*str == *(letter + counter) || *str == *(letter + counter) + 32)
+				*str = *(num + counter);
 			counter++;
 		}
 	}
