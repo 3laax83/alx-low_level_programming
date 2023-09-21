@@ -2,6 +2,7 @@
 
 /**
  * *string_toupper - converter function.
+ * @str: pointer to string.
  *
  * Description: a function that changes all
  * lowercase letters of a string to uppercase.
@@ -12,7 +13,8 @@
 char *string_toupper(char *str)
 {
 	char *save = str;
+
 	for (; *(str + 1); str++)
-		*str = toupper(*str);
+		*str = *str - 32;
 	return (save);
 }
