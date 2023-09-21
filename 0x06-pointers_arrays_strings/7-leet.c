@@ -22,14 +22,12 @@ char *leet(char *str)
 	char *num = "43071";
 	int counter;
 
-	while (*str++)
+	for (; *str; str++)
 	{
-		counter = 0;
-		while (counter < 5)
+		for (counter = 0; *letter; counter++)
 		{
 			if (*str == *(letter + counter) || *str == *(letter + counter) - 32)
 				*str = *(num + counter);
-			counter++;
 		}
 	}
 	return (save);
