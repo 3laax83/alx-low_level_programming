@@ -17,7 +17,7 @@ char *cap_string(char *str)
 	char *save = str;
 
 	if (*(str + 1) >= 'a' && *(str + 1) <= 'z')
-		*(str + 1) = *(str + 1) - 32;
+		*str = *str - 32;
 	while (*str++)
 	{
 		if (*str == ' ' || *str <= '\n')
