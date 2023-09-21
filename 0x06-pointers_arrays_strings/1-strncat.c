@@ -28,6 +28,7 @@ char *_strncat(char *dest, char *src, int n)
 
 		do {
 			char x = (*d = *s++);
+
 			if (x == 0)
 				break;
 			d++;
