@@ -12,19 +12,14 @@
 char *rot13(char *str)
 {
 	char *save = str;
-	char *letter = "abcdefghijklmnopqrstuvwxyz";
-	char *rot = "nopqrstuvwxyzabcdefghijklm";
-	int counter;
+	char offset;
 
-	for (; *str; str++)
+	while (*str++)
 	{
-		for (counter = 0; counter < 26; counter++)
-		{
-			if (*str == *(letter + counter))
-				*str = *(rot + counter);
-			if (*str == *(letter + counter) - 32)
-				*str = *(rot + counter) - 32;
-		}
+		offset = (*str & 32) + 65;
+		if ((*str >= 'a' && str <= 'z') || (*str >= 'A' && str <= 'Z'))
+			*str = (*str - offset + 13) % 26 + offset;
+		str++;
 	}
 	return (save);
 }
