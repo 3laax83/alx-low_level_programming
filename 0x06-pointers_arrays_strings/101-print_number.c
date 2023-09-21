@@ -2,19 +2,24 @@
 
 /**
  * print_number - printer function
- * @n: number to print
+ * @n: number
  *
- * Description: a function that prints an integer.
+ * Description: prints an integer
+ * with _putchar only.
  *
  * Return: None.
  */
 
 void print_number(int n)
 {
-	char *num = n;
+	unsigned int num = n;
 
-	for(; *num; num++)
+	if (n < 0)
 	{
-		_putchar(*num);
+		_putchar(45);
+		num = -num;
 	}
+	if (num / 10 >= 1)
+		print_number(num / 10);
+	_putchar('0' + num % 10);
 }
