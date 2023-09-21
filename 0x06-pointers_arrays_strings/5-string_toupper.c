@@ -14,7 +14,6 @@ char *string_toupper(char *str)
 {
 	char *save = str;
 
-	for (; *(str + 1); str++)
-		*str = *str - 32;
+	while ((*str++ = toupper(*str)));
 	return (save);
 }
