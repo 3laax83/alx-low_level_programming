@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * leet - a function that encodes a string.
- *
+ * rot13 - a function that encodes a string.
+ * @str: pointer to string.
  * Description: a function that encodes a
  * string using rot13.
  *
@@ -16,7 +16,7 @@ char *rot13(char *str)
 	char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int counter;
 
-	for(; *str; str++)
+	for (; *str; str++)
 	{
 		for (counter = 0; counter < 52; counter++)
 		{
