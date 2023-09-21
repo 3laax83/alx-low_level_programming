@@ -20,5 +20,5 @@ char *_strcat(char *dest, char *src)
 	dest--;
 	while ((*dest++ = *src++))
 	;
-	return (dest);
+	return ((*dest));
 }
