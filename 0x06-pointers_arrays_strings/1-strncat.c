@@ -18,10 +18,21 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	char *save = dest;
+	if (n != 0)
+	{
+		char *d = dest;
+		const char *s = src;
 
-	for (; *dest; dest++)
-	;
-	while ((*dest++ = *src++) && n--);
-	return (save);
+		while (*d != 0)
+			d++;
+
+		do
+		{
+			if ((*d == *s++) == 0)
+				break;
+			d++;
+		} while (--n != 0);
+		*d = 0;
+	}
+	return (dest);
 }
