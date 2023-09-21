@@ -12,14 +12,15 @@
 char *rot13(char *str)
 {
 	char *save = str;
-	char offset;
+	char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int counter;
 
 	while (*str++)
 	{
-		offset = (*str & 32) + 65;
-		if ((*str >= 'a' && str <= 'z') || (*str >= 'A' && str <= 'Z'))
-			*str = (*str - offset + 13) % 26 + offset;
-		str++;
+		for (counter = 0; counter < 52; counter++)
+			if (*(str + counter) == *(input + counter))
+				*(str + counter) = *(output + counter);
 	}
 	return (save);
 }
