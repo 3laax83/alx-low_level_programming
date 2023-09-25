@@ -12,7 +12,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int sum1 = 0, sum2 = 0;
+	unsigned long sum1 = 0, sum2 = 0;
 
 	for (i = 0; i < size * size; i++)
 	{
@@ -25,5 +25,5 @@ void print_diagsums(int *a, int size)
                         sum2 += *(a + i);
                         }
 	}
-	printf("%d, %d\n", sum2, sum1);
+	printf("%lu, %lu\n", sum2, sum1);
 }
