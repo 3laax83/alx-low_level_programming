@@ -20,13 +20,10 @@ void print_diagsums(int *a, int size)
 			{
 			sum1 += *(a + i);
 			}
-	}
-	for (i = 0; i < size * size; i++)
-	{
 		if (i % (size + 1) == 0)
-			{
-			sum2 += *(a + i);
-			}
+                        {
+                        sum2 += *(a + i);
+                        }
 	}
 	printf("%d, %d\n", sum2, sum1);
 }
