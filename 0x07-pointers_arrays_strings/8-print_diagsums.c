@@ -22,7 +22,7 @@ void print_diagsums(int *a, int size)
 		}
 		if (i % (size + 1) == 0)
 		{
-                        sum2 += *(a + i);
+			sum2 += *(a + i);
 		}
 	}
 	printf("%lu, %lu\n", sum2, sum1);
