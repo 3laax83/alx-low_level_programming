@@ -15,7 +15,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	const char *p, *q;
 
-	for (; *haystack; haytack++)
+	for (; *haystack; haystack++)
 	{
 		p = haystack, q = needle;
 		while (*q && *p)
