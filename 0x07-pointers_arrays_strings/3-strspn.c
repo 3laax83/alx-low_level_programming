@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 				goto proceed;
 		break;
 
-		(proceed);
+proceed:;
 	}
 	return (p - s);
 }
