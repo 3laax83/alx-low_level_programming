@@ -1,10 +1,11 @@
+#ifndef MAIN_H_
 #define MAIN_H_
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <ctype.h>
-#include <string>
+#include <string.h>
 
 
 char *_memset(char *s, char b, unsigned int n);

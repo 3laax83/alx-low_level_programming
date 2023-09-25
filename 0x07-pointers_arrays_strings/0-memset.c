@@ -12,9 +12,9 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	register unsigned char *dest = (unsiged char *) s;
+	register unsigned char *dest = (unsigned char *) s;
 
-	while (len-- > 0)
+	while (n-- > 0)
 		*dest++ = b;
 	return (s);
 }
