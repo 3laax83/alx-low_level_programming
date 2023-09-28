@@ -12,7 +12,7 @@ int _sqrt(int num1, int num2)
 {
 	if (num2 * num2 == num1)
 		return (num2);
-	else
+	else (num2 * num2 > num1)
 		return (-1);
 	_sqrt(num1, num2 + 1);
 }
