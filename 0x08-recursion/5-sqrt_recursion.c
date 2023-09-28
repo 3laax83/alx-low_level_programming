@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+ * _sqrt - to find square root
+ * @num1: integer.
+ * @num2: integer.
+ * Description: a function to store value of n.
+ * Return: Square root of n
+*/
+
+int _sqrt(int num1, int num2)
+{
+	if (num2 * num2 == num1)
+		return (num2);
+	else if (num2 * num2 > num1)
+		return (_sqrt(num1, num2 + 1));
+	else
+		return (-1);
+}
+
+
+/**
  * _sqrt_recursion - square root counter.
  * @n: number to find its square root.
  * Description: a function that returns the natural square root of a number.
@@ -9,17 +28,8 @@
 
 int _sqrt_recursion(int n)
 {
-	if (n * n == n)
-		return (n);
-	else if (n >= 1)
-		return (n / 2);
-	else if (_sqrt_recursion(n) * 2 == n)
-	{
-		if (_sqrt_recursion(n) * _sqrt_recursion(n) == n)
-			return (_sqrt_recursion(n));
-		else
-			return (_sqrt_recursion(n) / 2);
-	}
-	else
+	if (n < 0)
 		return (-1);
+	else
+		_sqrt(n, 0);
 }
