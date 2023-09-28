@@ -14,7 +14,7 @@ int _sqrt(int num1, int num2)
 		return (num2);
 	else if (num2 * num2 > num1)
 		return (-1);
-	return(_sqrt(num1, num2 + 1));
+	return (_sqrt(num1, num2 + 1));
 }
 
 
@@ -27,5 +27,5 @@ int _sqrt(int num1, int num2)
 
 int _sqrt_recursion(int n)
 {
-	return(_sqrt(n, 0));
+	return (_sqrt(n, 0));
 }
