@@ -10,12 +10,11 @@
 
 int prime(int num1, int num2)
 {
-	if (num1 % num2 == 0 || num1 < 2)
+	if (num1 % num2 == 0 || num1 < num2)
 		return (0);
 	else if (num2 < num1 / 2)
 		return (1);
-	if (num2 < num1 / 2)
-		return (prime(num1, num2 + 1));
+	return (prime(num1, num2 + 1));
 }
 
 
