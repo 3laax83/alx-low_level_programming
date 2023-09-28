@@ -10,9 +10,15 @@
 int _sqrt_recursion(int n)
 {
 	if (_sqrt_recursion(n) * _sqrt_recursion(n) == n)
+	{
 		return (_sqrt_recursion(n));
+	}
 	else if (_sqrt_recursion(n) * _sqrt_recursion(n) > n)
+	{
 		return (_sqrt_recursion(n) / 2);
-	else:
+	}
+	else
+	{
 		return (-1);
+	}
 }
