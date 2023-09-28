@@ -27,7 +27,7 @@ int check(char *s, int len, int count)
 {
 	if (count >= len)
 		return (1);
-	if (str[len] == str[count])
+	if (s[len] == s[count])
 		return (checker(s, len - 1, count + 1));
 	return (0);
 }
@@ -47,5 +47,5 @@ int is_palindrome(char *s)
 	int length = _strlen_recursion(s);
 	int count = 0;
 
-	return (check(s, length - 1, counter)
+	return (check(s, length - 1, counter);
 }
