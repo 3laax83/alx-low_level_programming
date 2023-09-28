@@ -10,7 +10,7 @@
 
 int prime(int num1, int num2)
 {
-	if (num1 % num2 == 0)
+	if (num1 % num2 == 0 || num1 < 2)
 		return (0);
 	else if (num2 < num1 / 2)
 		return (1);
@@ -29,5 +29,5 @@ int prime(int num1, int num2)
 
 int is_prime_number(int n)
 {
-	return (prime(n, 0));
+	return (prime(n, 2));
 }
