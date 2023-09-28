@@ -11,14 +11,18 @@ int _sqrt_recursion(int n)
 {
 	if (_sqrt_recursion(n) * _sqrt_recursion(n) == n)
 	{
-		return (_sqrt_recursion(n));
+		return (n / 2);
 	}
 	else if (_sqrt_recursion(n) * _sqrt_recursion(n) > n)
 	{
 		return (_sqrt_recursion(n) / 2);
 	}
-	else
+	else if (_sqrt_recursion(n) * _sqrt_recursion(n) < n)
 	{
 		return (-1);
+	}
+	else
+	{
+		return (1);
 	}
 }
