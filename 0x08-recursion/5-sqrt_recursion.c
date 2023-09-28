@@ -17,6 +17,6 @@ int _sqrt_recursion(int n)
 	}
 	else
 		return (-1);
-	if ( _sqrt_recursion(n) == NULL)
+	if ( _sqrt_recursion(n) == 1)
 		return (n);
 }
