@@ -2,6 +2,7 @@
 
 /**
  * _puts_recursion - string printer
+ * @s: pointer to string.
  * Description: a function that prints a string.
  */
 
