@@ -12,10 +12,9 @@ int _sqrt(int num1, int num2)
 {
 	if (num2 * num2 == num1)
 		return (num2);
-	else if (num2 * num2 > num1)
-		return (_sqrt(num1, num2 + 1));
 	else
 		return (-1);
+	_sqrt(num1, num2 + 1);
 }
 
 
@@ -28,8 +27,5 @@ int _sqrt(int num1, int num2)
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	else
-		return(_sqrt(n, 0));
+	return(_sqrt(n, 0));
 }
