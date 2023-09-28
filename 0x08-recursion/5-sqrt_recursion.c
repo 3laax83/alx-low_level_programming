@@ -14,7 +14,7 @@ int _sqrt(int num1, int num2)
 		return (num2);
 	else if (num2 * num2 > num1)
 		return (-1);
-	_sqrt(num1, num2 + 1);
+	return(_sqrt(num1, num2 + 1));
 }
 
 
