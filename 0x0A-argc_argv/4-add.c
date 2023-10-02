@@ -7,7 +7,7 @@
  * @argc: # arguments.
  * @argv: -> arguments.
  * Description: a program that adds positive numbers.
- * Result: 0 if success, 1 if not.
+ * Return: 0 if success, 1 if not.
  */
 
 int main(int argc, char **argv)
@@ -17,11 +17,10 @@ int main(int argc, char **argv)
 
 	for (i = 0; i < argc; i++)
 	{
-		j = 0;
 		letter = argv[i];
-		while (letter[j] != '\0' && j++)
+		for (j = 0; letter[j] != '\0'; j++)
 		{
-			if (!isdigit(letter[j]))
+			if (letter[j] < '0' || letter[j] > '9')
 			{
 				printf("Error\n");
 				return (1);
