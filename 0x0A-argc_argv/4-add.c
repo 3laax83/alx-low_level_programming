@@ -24,13 +24,14 @@ int main(int argc, char **argv)
 	{
 		letter = argv[i];
 		j = 0;
-		while (letter[j] != '\0' && j++)
+		while (letter[j] != '\0')
 		{
 			if (!isdigit(letter[j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
+			j++;
 		}
 		result += atoi(argv[i]);
 		i++;
