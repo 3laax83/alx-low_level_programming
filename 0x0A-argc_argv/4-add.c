@@ -12,21 +12,28 @@
 
 int main(int argc, char **argv)
 {
-	int i, j, result = 0;
+	int i = 1, j, result = 0;
 	char *letter;
 
-	for (i = 0; i < argc; i++)
+	if (argc == 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	while (i < argc)
 	{
 		letter = argv[i];
-		for (j = 0; letter[j] != '\0'; j++)
+		j = 0;
+		while (letter[j] != '\0' && j++)
 		{
-			if (letter[j] < '0' || letter[j] > '9')
+			if (!isdigit(letter[j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
 		result += atoi(argv[i]);
+		i++;
 	}
 	printf("%d\n", result);
 	return (0);
