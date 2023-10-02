@@ -3,11 +3,13 @@
 
 /**
  * main - the main function.
+ * @argc: length of argv.
+ * @argv: pointer to arguments.
  * Description: a program to write its name.
  * Return: Always 0.
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
