@@ -5,7 +5,7 @@
 /**
  * main - main function.
  * @argc: # arguments.
- * @argv: -> arguments. 
+ * @argv: -> arguments.
  * Description: a program that adds positive numbers.
  * Result: 0 if success, 1 if not.
  */
@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 {
 	int i, j, result = 0;
 	char *letter;
-		
+
 	for (i = 0; i < argc; i++)
 	{
 		j = 0;
@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 			if (!isdigit(letter[j]))
 			{
 				printf("Error\n");
-				return(1);
+				return (1);
 			}
 		}
 		result += atoi(argv[i]);
