@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <ctype.h>
 #include "main.h"
+
 /**
  * _islower - check if the letter
  * is lower case or not

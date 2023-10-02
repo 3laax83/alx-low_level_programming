@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
  * _isalpha - checks if the letter
  * is alpha
