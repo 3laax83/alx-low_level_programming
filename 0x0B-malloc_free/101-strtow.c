@@ -36,6 +36,20 @@ int word_count(char *str)
 	return (words);
 }
 
+
+/**
+ * free_everything - frees the memory
+ * @string: pointer values being passed for freeing
+ * @i: counter
+ */
+void free_everything(char **string, int i)
+{
+	for (; i > 0;)
+		free(string[--i]);
+	free(string);
+}
+
+
 /**
  * strtow -  a function that splits a string into words.
  * @str: pointer to string.
@@ -45,44 +59,51 @@ int word_count(char *str)
 
 char **strtow(char *str)
 {
-	char **split;
-	int i, j = 0, temp = 0, size = 0, words = word_count(str);
+	int total = 0, a = 0, b = 0, length = 0;
+	char **words, *found;
+
+	if (str == 0 || *str == 0)
+		return (NULL);
+
+	total = word_count(str);
+	if (total == 0)
+		return (NULL);
+
+	words = malloc(sizeof(char *) * (total + 1));
 	if (words == 0)
 		return (NULL);
-	split = (char **) malloc(sizeof(char *) * (words + 1));
-	if (split != NULL)
-	{
-		for (i = 0; i <= length(str); i++)
-		{
-			if ((str[i] != ' ') && (str[i] != '\0'))
-				size++;
-			else 
-			{
-				split[j] = (char *) malloc(size + 1);
-				if (split[j] != NULL)
-				{
-					while (temp < size)
-					{
-						split[j][temp] = str[i - size + temp];
-						temp++;
-					}
-					split[j][temp] = '\0';
-					size = temp = 0;
-					j++;
-				}
-				else
-				{
-					while (j-- >= 0)
-						free(split[j]);
-					free(split);
-					return (NULL);
 
-				}
+	for (; *str != '\0' && a < total;)
+	{
+		if (*str = ' ')
+			str++;
+		else
+		{
+			found = str;
+			for (;*str != '\0' && *str != ' ';)
+			{
+				length++;
+				str++;
 			}
+
+			words[a] = malloc(sizeof(char *) * (length + 1));
+			if (words[a] == 0)
+			{
+				free_everything(words, a);
+				return (NULL);
+			}
+			while (found != ' ' && found != '\0')
+			{
+				words[a][b] = found;
+				found++;
+				b++;
+			}
+			words[b][c] = '\0';
+			b++;
+			c = 0;
+			length = 0;
+			str++;
 		}
-		split[words] = NULL;
-		return (split);
 	}
-	else
-		return (NULL);
+	return (words);
 }
