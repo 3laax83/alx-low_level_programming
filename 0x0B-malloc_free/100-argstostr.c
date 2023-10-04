@@ -23,11 +23,11 @@ char *argstostr(int ac, char **av)
 		counter1++;
 	}
 	counter1++;
-	save = malloc(counter1 * sizeof(char));
+	save = malloc(counter1 * sizeof(char *));
 	if (save == 0)
 		return (NULL);
 
-	for(counter2 = 0; counter2 < ac; counter2++)
+	for (counter2 = 0; counter2 < ac; counter2++)
 	{
 		for (counter3 = 0; av[counter2][counter3] != 0; counter3++)
 			save[counter4++] = av[counter2][counter3];
