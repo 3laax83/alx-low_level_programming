@@ -49,12 +49,10 @@ void free_everything(char **string, int i)
 
 char **strtow(char *str)
 {
-	int a = 0, b = 0, length = 0;
+	int total = word_count(str), a = 0, b = 0, length = 0;
 	char **words, *found;
 
-	if (str == NULL || *str == 0)
-		return (NULL);
-	if (word_count(str) == 0)
+	if (str == NULL || *str == 0 || total == 0)
 		return (NULL);
 	words = (char **) malloc(sizeof(char *) * (word_count(str) + 1));
 	if (words == 0)
