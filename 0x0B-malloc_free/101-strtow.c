@@ -15,27 +15,21 @@ char **strtow(char *str)
 	if (str == NULL || str[0] == '\0' || str[0] == ' ' || str[1] == '\0')
 		return (NULL);
 
-	while (str[i])
-	{
-		if (sign == 0 && str[i] != ' ')
-			sign = 1;
-		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
-		{
-			sign = 0;
+	for (i = 0; str[i] != '\0'; i++)
+		if (str[i] != 32)
 			size++;
-		}
-		i++;
-	}
-
-	size += sign == 1 ? 1 : 0;
-
-	if (size == 0)
-		return (NULL);
 
 	words = (char **) malloc(sizeof(char *) * (size + 1));
+
 	if (words == NULL)
 		return (NULL);
-	else
-		return (words);
-
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] != 32)
+		{
+			*words[j] = str[i];
+			j++;
+		}
+	}
+	return (words;)
 }
