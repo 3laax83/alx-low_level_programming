@@ -14,13 +14,13 @@ char *_strdup(char *str)
 {
 	size_t len;
 	char *copy;
-	bool statement;
+	int statement;
 
 	if (str == NULL)
 		return (NULL);
 
 	len = strlen(str) + 1;
-	statement = (copy = malloc((u_int) len);
+	statement = (copy = malloc((u_int) len));
 	if (!statement)
 		return (NULL);
 	memcpy(copy, str, len);
