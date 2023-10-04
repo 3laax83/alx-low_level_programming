@@ -66,7 +66,7 @@ char **strtow(char *str)
 		else
 		{
 			found = str;
-			for (;*str != '\0' && *str != ' ';)
+			for (; *str != '\0' && *str != ' '; )
 			{
 				length++;
 				str++;
@@ -83,7 +83,11 @@ char **strtow(char *str)
 				found++;
 				b++;
 			}
-			words[a][b] = '\0'; a++; b = 0; length = 0; str++;
+			words[a][b] = '\0';
+			a++;
+			b = 0;
+			length = 0;
+			str++;
 		}
 	}
 	return (words);
