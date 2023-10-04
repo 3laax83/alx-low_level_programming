@@ -11,7 +11,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *save;
+	char *save = NULL;
 	int size1 = 0, size2 = 0;
 	int i, j;
 
@@ -25,8 +25,8 @@ char *str_concat(char *s1, char *s2)
 	for (; *s2; ++s2)
 		size2++;
 
-	save = (char *)malloc(1 + size1 + size2);
-	if (save == 0)
+	save = (char *) malloc(1 + size1 + size2);
+	if (save == NULL)
 		return (NULL);
 
 	for (i = 0; i < size1; i++)
