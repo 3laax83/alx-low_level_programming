@@ -64,7 +64,7 @@ char **strtow(char *str)
 		{
 			if ((str[i] != ' ') && (str[i] != '\0'))
 				size++;
-			else if ((str[i] == ' ' || str[i] == '\0') && str[i - 1] != ' ')
+			else if ((str[i] == ' ' || (str[i] == '\0' && str[i - 1] != ' ')))
 			{
 				split[j] = (char *) malloc(size + 1);
 				if (split[j] != NULL)
