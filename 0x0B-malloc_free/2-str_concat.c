@@ -12,12 +12,19 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *save;
+	int size1 = 0, size2 = 0;
 
 	if (s1 == 0)
 		s1 = "";
 	if (s2 == 0)
 		s2 = "";
-	save = malloc (s1 * sizeof(char) + s2 * sizeof(char));
+	for (; *s1; ++s1)
+		size1++;
+	for (; *s2; ++s2)
+		size2++;
+	save = malloc (size1 * sizeof(char) + size2 * sizeof(char));
+	if (save == 0)
+		return (NULL);
 	while ((*save++ = *s1++) != '\0')
 		;
 	while ((*save++ = *s2++) != '\0')
