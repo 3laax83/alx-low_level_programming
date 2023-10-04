@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 		while(av[counter2][counter3])
 		{
 			counter1++;
-			counter3++
+			counter3++;
 		}
 		counter1++;
 		counter2++;
