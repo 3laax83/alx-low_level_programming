@@ -9,20 +9,21 @@
 
 char **strtow(char *str)
 {
-	int i = 0, j = 0, size = 0;
+	int i, j = 0, size = 0;
 	char **words;
 
-	if (str == NULL || str[0] == '\0' || str[0] == ' ' || str[1] == '\0')
+	if (str == NULL)
 		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
 		if (str[i] != 32)
 			size++;
 
-	words = (char **) malloc(sizeof(char *) * (size + 1));
+	words = (char **) malloc(sizeof(char *) * (size));
 
 	if (words == NULL)
 		return (NULL);
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != 32)
