@@ -14,7 +14,7 @@ char *_strdup(char *str)
 {
 	size_t len;
 	char *copy;
-	int statement;
+	char *statement;
 
 	if (str == NULL)
 		return (NULL);
