@@ -35,8 +35,8 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	while ((*save++ = *s1++) = '\0');
-	while ((*save++ = *s2++) = '\0');
+	while ((*save++ = *s1++) != '\0');
+	while ((*save++ = *s2++) != '\0');
 
 	save[size1 + size2] = '\0';
 
