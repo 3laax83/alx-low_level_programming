@@ -9,7 +9,7 @@
 
 char **strtow(char *str)
 {
-	int i = 0, sign = 0, size = 0;
+	int i = 0, j = 0, size = 0;
 	char **words;
 
 	if (str == NULL || str[0] == '\0' || str[0] == ' ' || str[1] == '\0')
@@ -31,5 +31,5 @@ char **strtow(char *str)
 			j++;
 		}
 	}
-	return (words;)
+	return (words);
 }
