@@ -35,5 +35,7 @@ char **strtow(char *str)
 	words = (char **) malloc(sizeof(char *) * (size + 1));
 	if (words == NULL)
 		return (NULL);
+	else
+		return (words);
 
 }
