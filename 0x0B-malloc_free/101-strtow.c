@@ -30,7 +30,7 @@ int word_count(char *str)
 
 	for (i = 0; i <= length(str); i++)
 	{
-		if (str[i] == ' ' || (str[i] == '\0' && str[i - 1] != ' '))
+		if (str[i] == ' ' && str[i + 1] != 0 || (str[i] == '\0' && str[i - 1] != ' '))
 			words++;
 	}
 	return (words);
@@ -62,7 +62,7 @@ char **strtow(char *str)
 	int total = 0, a = 0, b = 0, length = 0;
 	char **words, *found;
 
-	if (str == NULL || *str == 0 || (str[0] == 32 && str[1] == 0))
+	if (str == NULL || *str == 0)
 		return (NULL);
 	total = word_count(str);
 	if (total == 0)
