@@ -9,14 +9,11 @@
 
 int length(char *str)
 {
-	int len = 0;
+	const char *s;
 
-	if (str != NULL)
-	{
-		while(str[len])
-			len++;
-	}
-	return (len);
+	for(s = str; *s; ++s)
+		;
+	return (s - str);
 }
 
 
@@ -29,17 +26,12 @@ int length(char *str)
 
 int word_count(char *str)
 {
-	int i = 0, words = 0;
+	int i, words = 0;
 
-	while (i <= length(str))
+	for (i = 0; i <= length(str); i++)
 	{
-		if (str[i] != ' ' && str[i] != '\0')
-			i++;
-		else if (str[i] == ' ' || (str[i] == '\0' && str[i - 1] != ' '))
-		{
+		if (str[i] == ' ' || (str[i] == '\0' && str[i - 1] != ' '))
 			words++;
-			i++;
-		}
 	}
 	return (words);
 }
