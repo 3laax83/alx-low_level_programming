@@ -9,18 +9,21 @@
 
 char **strtow(char *str)
 {
-	int i, j = 0, size = 0;
 	char **words;
+	int i;
+	int j = 0;
+	int count = 0;
 
 	if (str == NULL)
 		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
+	{
 		if (str[i] != 32)
-			size++;
+			count++;
+	}
 
-	words = malloc(sizeof(char) * (size));
-
+	words = malloc(sizeof(char) * count);
 	if (words == NULL)
 		return (NULL);
 
@@ -28,8 +31,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != 32)
 		{
-			*words[j] = str[i];
-			j++;
+			*words[j++] = str[i];
 		}
 	}
 	return (words);
