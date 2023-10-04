@@ -2,23 +2,6 @@
 
 
 /**
- * length - return length of string.
- * @str: pointer to string
- * Return: length of str
- */
-
-int length(char *str)
-{
-	const char *s;
-
-	for(s = str; *s; ++s)
-		;
-	return (s - str);
-}
-
-
-
-/**
  * word_count - to count strings words
  * @str: pointer to string.
  * Return: number of words.
@@ -28,10 +11,16 @@ int word_count(char *str)
 {
 	int i, words = 0;
 
-	for (i = 0; i <= length(str); i++)
+	for (i = 0; str[i] != 0; i++)
 	{
-		if ((str[i] == ' ' && str[i + 1] != '\0') || (str[i] == '\0' && str[i - 1] != ' '))
+		if (*str = ' ')
+			str++;
+		else
+		{
+			for (; str[i] != 0 str[i] != ' ';)
+				str++;
 			words++;
+		}
 	}
 	return (words);
 }
