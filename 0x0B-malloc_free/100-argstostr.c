@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (counter3 = 0; av[counter2][counter3] != 0; counter3++)
 			save[counter4++] = av[counter2][counter3];
-		save[counter4] = 10;
+		save[counter4++] = 10;
 	}
 	save[counter4] = 0;
 	return (save);
