@@ -16,14 +16,18 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (; counter2 < ac; counter2++)
+	while (counter2 < ac)
 	{
-		for (; av[counter2][counter3] != 0; counter3++)
+		counter3 = 0;
+		while(av[counter2][counter3])
+		{
 			counter1++;
+			counter3++
+		}
 		counter1++;
+		counter2++;
 	}
-	counter1++;
-	save = (char *) malloc(counter1 * sizeof(char));
+	save = malloc(1 + counter1 * sizeof(char));
 	if (save == 0)
 		return (NULL);
 
