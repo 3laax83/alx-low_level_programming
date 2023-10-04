@@ -75,9 +75,7 @@ char **strtow(char *str)
 
 	for (; *str != '\0' && a < total;)
 	{
-		if (*str == ' ' && *(str + 1) == '\0')
-			printf("Failed");
-		if (*str == ' ')
+		if (*str == ' ' && *(str + 1) != '\0')
 			str++;
 		else
 		{
