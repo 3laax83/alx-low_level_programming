@@ -69,7 +69,7 @@ char **strtow(char *str)
 	if (total == 0)
 		return (NULL);
 
-	words = malloc(sizeof(char *) * (total + 1));
+	words = (char **) malloc(sizeof(char *) * (total + 1));
 	if (words == 0)
 		return (NULL);
 
@@ -86,7 +86,7 @@ char **strtow(char *str)
 				str++;
 			}
 
-			words[a] = malloc(sizeof(char *) * (length + 1));
+			words[a] = (char *) malloc(sizeof(char) * (length + 1));
 			if (words[a] == 0)
 			{
 				free_everything(words, a);
