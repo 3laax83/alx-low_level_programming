@@ -13,14 +13,9 @@ int word_count(char *str)
 
 	for (i = 0; str[i] != 0; i++)
 	{
-		if (str[i] == ' ')
+		while (*str[i] != 32)
 			str++;
-		else
-		{
-			for (; str[i] != 0 && str[i] != ' ';)
-				str++;
-			words++;
-		}
+		words++;
 	}
 	return (words);
 }
