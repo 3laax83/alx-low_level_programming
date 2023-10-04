@@ -13,7 +13,7 @@ int word_count(char *str)
 
 	for (i = 0; str[i] != 0; i++)
 	{
-		while (*str[i] != 32)
+		while (str[i] != 32)
 			str++;
 		words++;
 	}
