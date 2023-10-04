@@ -6,7 +6,7 @@
  * @height: height of grid.
  * Description: a function that returns a pointer to
  * a 2 dimensional array of integers.
- * Return: NULL unless sucess returns grid. 
+ * Return: NULL unless sucess returns grid.
  */
 
 int **alloc_grid(int width, int height)
@@ -21,8 +21,8 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
-		 array[i] = malloc(sizeof(int *) * width);
-		 if (array[i] == NULL)
+		array[i] = malloc(sizeof(int *) * width);
+		if (array[i] == NULL)
 		{
 			for (--i; i >= 0; i--)
 				free(array[i]);
