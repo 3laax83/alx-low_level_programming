@@ -16,8 +16,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == 0)
 		return (NULL);
 
-	for (; counter1 < ac; counter1++)
-		;
+	counter1 = ac;
 	save = malloc(counter1 * sizeof(char *));
 	if (save == 0)
 		return (NULL);
