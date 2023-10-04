@@ -13,10 +13,13 @@ char *argstostr(int ac, char **av)
 	char *save;
 	int counter2 = 0, counter3 = 0, counter4 = 0;
 
-	if (ac == 0 || av == 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	save = malloc((ac - 3) * sizeof(char *));
+	for (; counter2 < ac; counter2++)
+		for (; av[counter2][counter3] != 0; counter3++)
+			counter1++;
+	save = malloc(ac * sizeof(char *));
 	if (save == 0)
 		return (NULL);
 
