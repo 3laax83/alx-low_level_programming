@@ -98,7 +98,7 @@ char **strtow(char *str)
 				found++;
 				b++;
 			}
-			words[b][c] = '\0';
+			words[a][b] = '\0';
 			b++;
 			c = 0;
 			length = 0;
