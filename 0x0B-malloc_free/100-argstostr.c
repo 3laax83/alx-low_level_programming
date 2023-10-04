@@ -11,15 +11,19 @@
 char *argstostr(int ac, char **av)
 {
 	char *save;
-	int counter1 = 0, counter2 = 0, counter3 = 0, counter4 = 0;
+	int counter1, counter2, counter3, counter4;
 
 	if (ac == 0 || av == 0)
 		return (NULL);
 
-	for (; counter2 < ac; counter2++)
+	counter1 = 0
+	for (counter2 = 0; counter2 < ac; counter2++)
 	{
+		for (counter3; av[counter2][counter3] != 0; counter3++)
+			counter1++;
 		counter1++;
 	}
+	counter1++;
 	save = malloc(counter1 * sizeof(char *));
 	if (save == 0)
 		return (NULL);
