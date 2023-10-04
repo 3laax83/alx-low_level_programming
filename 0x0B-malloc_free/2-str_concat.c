@@ -31,9 +31,13 @@ char *str_concat(char *s1, char *s2)
 	save = (char *)malloc(1 + size1 + size2);
 	if (save == 0)
 		return (NULL);
-	while ((*save++ = *s1++))
-		;
-	while ((*save++ = *s2++))
-                ;
+
+	int i, j;
+
+	for (i = 0; i < size1; i++)
+	       save[i] = s1[i];
+	for (j = 0; j < size2; j++, i++)
+		save[i] = s2[j];
+	save[size1 + size2] = '\0';
 	return (save);
 }
