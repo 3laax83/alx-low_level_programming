@@ -23,11 +23,11 @@ char *str_concat(char *s1, char *s2)
 	if (s2 != NULL)
 	{
 		j = 0;
-		while (s2[j++] != '\0')
+		while (s2[j++])
 			size2++;
 	}
 
-	save = (char *) malloc(size1 + size2);
+	save = (char *) malloc(1 + size1 + size2);
 	if (save == NULL)
 		return (NULL);
 
