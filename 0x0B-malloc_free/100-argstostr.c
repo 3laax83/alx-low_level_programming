@@ -16,7 +16,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == 0)
 		return (NULL);
 
-	counter1 = 0
+	counter1 = 0;
 	for (counter2 = 0; counter2 < ac; counter2++)
 	{
 		for (counter3; av[counter2][counter3] != 0; counter3++)
