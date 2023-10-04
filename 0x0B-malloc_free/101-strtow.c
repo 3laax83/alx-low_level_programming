@@ -13,11 +13,11 @@ int word_count(char *str)
 
 	for (i = 0; str[i] != 0; i++)
 	{
-		if (*str = ' ')
+		if (str[i] = ' ')
 			str++;
 		else
 		{
-			for (; str[i] != 0 str[i] != ' ';)
+			for (; str[i] != 0 && str[i] != ' ';)
 				str++;
 			words++;
 		}
