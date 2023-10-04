@@ -18,7 +18,7 @@ char **strtow(char *str)
 	while (str[i])
 	{
 		if (sign == 0 && str[i] != ' ')
-			sign == 1;
+			sign = 1;
 		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
 		{
 			sign = 0;
