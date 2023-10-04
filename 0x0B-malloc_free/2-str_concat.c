@@ -15,18 +15,18 @@ char *str_concat(char *s1, char *s2)
 	int size1 = 0, size2 = 0;
 	int i, j;
 
-	if (s1 == NULL)
+	if (s1 == 0)
 		s1 = "";
 	for (; *s1 != '\0'; ++s1)
 		size1++;
 
-	if (s2 == NULL)
+	if (s2 == 0)
 		s2 = "";
-	for (; *s2 != '\0'; ++s2)
+	for (; *s2; ++s2)
 		size2++;
 
-	save = (char *)malloc(1 + size1 * sizeof(*s1) + size2 * sizeof(*s2));
-	if (save == NULL)
+	save = (char *)malloc(1 + size1 + size2);
+	if (save == 1)
 		return (NULL);
 
 	for (i = 0; i < size1; i++)
