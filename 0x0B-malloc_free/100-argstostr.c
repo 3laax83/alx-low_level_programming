@@ -22,7 +22,6 @@ char *argstostr(int ac, char **av)
 			counter1++;
 		counter1++;
 	}
-	counter1++;
 	save = (char *) malloc(counter1 * sizeof(char));
 	if (save == 0)
 		return (NULL);
