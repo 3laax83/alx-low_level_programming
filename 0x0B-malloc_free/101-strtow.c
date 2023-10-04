@@ -59,7 +59,7 @@ char **strtow(char *str)
 	words = (char **) malloc(sizeof(char *) * (word_count(str) + 1));
 	if (words == 0)
 		return (NULL);
-	for (; *str != '\0' && a < total;)
+	for (; *str != '\0' && a < word_count(str);)
 	{
 		if (*str == ' ')
 			str++;
