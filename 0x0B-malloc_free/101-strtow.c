@@ -55,7 +55,6 @@ char **strtow(char *str)
 {
 	char **split;
 	int i, j = 0, temp = 0, size = 0, words = word_count(str);
-
 	if (words == 0)
 		return (NULL);
 	split = (char **) malloc(sizeof(char *) * (words + 1));
@@ -65,7 +64,7 @@ char **strtow(char *str)
 		{
 			if ((str[i] != ' ') && (str[i] != '\0'))
 				size++;
-			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+			else if ((str[i] == ' ' || str[i] == '\0') && str[i - 1] != ' ')
 			{
 				split[j] = (char *) malloc(size + 1);
 				if (split[j] != NULL)
