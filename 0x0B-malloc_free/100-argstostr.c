@@ -19,7 +19,7 @@ char *argstostr(int ac, char **av)
 	while (counter2 < ac)
 	{
 		counter3 = 0;
-		while(av[counter2][counter3])
+		while (av[counter2][counter3])
 		{
 			counter1++;
 			counter3++;
