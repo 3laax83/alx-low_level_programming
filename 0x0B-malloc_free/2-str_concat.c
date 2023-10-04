@@ -31,9 +31,9 @@ char *str_concat(char *s1, char *s2)
 	save = (char *)malloc(1 + size1 + size2);
 	if (save == 0)
 		return (NULL);
-	while (*save++ = *s1++)
+	while ((*save++ = *s1++))
 		;
-	while (*save++ = *s2++)
+	while ((*save++ = *s2++))
                 ;
 	return (save);
 }
