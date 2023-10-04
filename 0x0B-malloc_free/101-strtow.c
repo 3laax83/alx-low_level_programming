@@ -30,7 +30,7 @@ int word_count(char *str)
 
 	for (i = 0; i <= length(str); i++)
 	{
-		if (str[i] == ' ' && str[i + 1] != 0 || (str[i] == '\0' && str[i - 1] != ' '))
+		if ((str[i] == ' ' && str[i + 1] != 0) || (str[i] == '\0' && str[i - 1] != ' '))
 			words++;
 	}
 	return (words);
