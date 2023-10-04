@@ -75,7 +75,7 @@ char **strtow(char *str)
 
 	for (; *str != '\0' && a < total;)
 	{
-		if (*str = ' ')
+		if (*str == ' ')
 			str++;
 		else
 		{
@@ -92,9 +92,9 @@ char **strtow(char *str)
 				free_everything(words, a);
 				return (NULL);
 			}
-			while (found != ' ' && found != '\0')
+			while (*found != ' ' && *found != '\0')
 			{
-				words[a][b] = found;
+				words[a][b] = *found;
 				found++;
 				b++;
 			}
