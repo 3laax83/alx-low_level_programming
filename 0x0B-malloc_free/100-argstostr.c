@@ -10,7 +10,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	char *save;
+	char **save;
 	int counter1 = 0, counter2 = 0, counter3 = 0, counter4 = 0;
 
 	if (ac == 0 || av == 0)
@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 			counter1++;
 		counter1++;
 	}
-	save = (char *) malloc(counter1 * sizeof(char));
+	save = (char **) malloc(counter1 * sizeof(char *));
 	if (save == 0)
 		return (NULL);
 
