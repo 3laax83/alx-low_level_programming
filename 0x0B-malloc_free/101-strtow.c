@@ -62,7 +62,7 @@ char **strtow(char *str)
 	int total = 0, a = 0, b = 0, length = 0;
 	char **words, *found;
 
-	if (str == 0 || *str == 0 || (str[0] == " " && str[1] == '\0'))
+	if (str == 0 || *str == 0 || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 
 	total = word_count(str);
