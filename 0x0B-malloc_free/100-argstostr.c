@@ -19,7 +19,7 @@ char *argstostr(int ac, char **av)
 	for (; counter2 < ac; counter2++)
 	{
 		for (; av[counter2][counter3] != 0; counter3++)
-			counter1++;
+			;
 		counter1++;
 	}
 	save = malloc(counter1 * sizeof(char *));
