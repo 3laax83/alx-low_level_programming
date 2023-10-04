@@ -19,7 +19,7 @@ char *argstostr(int ac, char **av)
 	counter1 = 0;
 	for (counter2 = 0; counter2 < ac; counter2++)
 	{
-		for (counter3; av[counter2][counter3] != 0; counter3++)
+		for (counter3 = 0; av[counter2][counter3] != 0; counter3++)
 			counter1++;
 		counter1++;
 	}
