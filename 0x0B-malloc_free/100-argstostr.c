@@ -11,13 +11,12 @@
 char *argstostr(int ac, char **av)
 {
 	char *save;
-	int counter1 = 0, counter2 = 0, counter3 = 0, counter4 = 0;
+	int counter2 = 0, counter3 = 0, counter4 = 0;
 
 	if (ac == 0 || av == 0)
 		return (NULL);
 
-	counter1 = ac;
-	save = malloc(counter1 * sizeof(char *));
+	save = malloc(ac * sizeof(char *));
 	if (save == 0)
 		return (NULL);
 
