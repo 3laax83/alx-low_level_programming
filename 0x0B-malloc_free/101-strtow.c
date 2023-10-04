@@ -60,11 +60,11 @@ char **strtow(char *str)
 	split = (char **) malloc(sizeof(char *) * (words + 1));
 	if (split != NULL)
 	{
-		for (i = 0; i <= length(str) && words; i++)
+		for (i = 0; i <= length(str); i++)
 		{
 			if ((str[i] != ' ') && (str[i] != '\0'))
 				size++;
-			else if ((str[i] == ' ' || (str[i] == '\0' && str[i - 1] != ' ')))
+			else 
 			{
 				split[j] = (char *) malloc(size + 1);
 				if (split[j] != NULL)
