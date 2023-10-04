@@ -19,7 +19,7 @@ char **strtow(char *str)
 		if (str[i] != 32)
 			size++;
 
-	words = (char **) malloc(sizeof(char *) * (size));
+	words = malloc(sizeof(char) * (size));
 
 	if (words == NULL)
 		return (NULL);
