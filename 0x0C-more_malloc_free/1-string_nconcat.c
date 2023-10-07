@@ -40,16 +40,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (newN >= len2)
 		newN = len2;
-	
+
 	save = malloc(sizeof(char) * (len1 + newN + 1));
 
 	if (save == NULL)
 		return (NULL);
 
-	while ((save[i] = s1[i]) != 0)
+	while (i < len1)
+	{
+		save[i] = s1[i];
 		i++;
-	while ((save[i] = s2[i - len1]) && newN-- > 0)
+	}
+	while (i < (len1 + len2))
+	{
+		save[i] = s2[i - len1];
 		i++;
+	}
 
 	save[i++] = 0;
 
