@@ -44,6 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 	while ((save[i] = s2[i - len1]) && newN-- > 0)
 		i++;
+	save[i++] = 0;
 
 	return (save);
 }
