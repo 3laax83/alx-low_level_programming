@@ -2,7 +2,7 @@
 
 int _strlen(char *str)
 {
-	const *s;
+	const char *s;
 
 	for (s = str; *s; ++s)
 		;
@@ -21,33 +21,29 @@ int _strlen(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int counter = 0;
+	int newN = (int16_t) n;
 	char *save;
 	int len1 = _strlen(s1);
 	int len2 = _strlen(s2);
+	int i = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
-		s2 = NULL;
+		s2 = "";
 
-	if (len2 >= n)
-	{
-		len2 = n;
-		save = malloc(sizeof(char) * (len1 + len2 + 1));
-	}
-	else
-	{
-		save = malloc(sizeof(char) * (len1 + n + 1));
-	}
+	if (newN >= len2)
+		newN = len2;
 
-	if (save = NULL)
+	save = malloc(sizeof(char *) * (len1 + newN + 1));
+
+	if (save == NULL)
 		return (NULL);
 
-	for (; *s1; ++s1);
-	while ((*save++ = s1++) != 0);
-	while ((*save++ = s2++) && counter < n)
-		counter++;
+	while ((save[i] = s1[i]))
+		i++;
+	while ((save[i] = s2[i - len1]) && newN-- > 0)
+		i++;
 
 	return (save);
 }
