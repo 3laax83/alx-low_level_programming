@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _strlen - to find string length.
+ * @str: pointer to string.
+ * Return: length of string.
+ */
+
 int _strlen(char *str)
 {
 	const char *s;
