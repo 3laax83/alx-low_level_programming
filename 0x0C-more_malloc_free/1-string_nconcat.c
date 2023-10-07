@@ -48,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	while ((save[i] = s1[i]))
 		i++;
-	while ((save[i] = s2[i - len1]) && newN-- >= 0)
+	while ((save[i] = s2[i - len1 - 1]) && newN-- >= 0)
 		i++;
 
 	return (save);
