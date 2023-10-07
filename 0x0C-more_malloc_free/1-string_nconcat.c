@@ -51,9 +51,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		save[i] = s1[i];
 		i++;
 	}
-	while (i < (len1 + newN))
+	i = 0;
+	while (i < len2)
 	{
-		save[i] = s2[i - len1];
+		save[i + len1] = s2[i];
 		i++;
 	}
 
