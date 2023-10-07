@@ -8,11 +8,11 @@
 
 int _strlen(char *str)
 {
-	const char *s;
+	int i = 0;
 
-	for (s = str; *s; ++s)
+	for (; s[i] != 0; i++)
 		;
-	return (s - str);
+	return (i);
 }
 
 /**
