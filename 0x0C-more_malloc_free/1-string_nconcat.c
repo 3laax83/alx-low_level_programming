@@ -39,9 +39,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	if (newN >= len2)
+	{
+		save = malloc(sizeof(char *) * (len1 + len2 + 1));
 		newN = len2;
-
-	save = malloc(sizeof(char *) * (len1 + newN + 1));
+	}
+	else
+		save = malloc(sizeof(char *) * (len1 + newN + 1));
 
 	if (save == NULL)
 		return (NULL);
