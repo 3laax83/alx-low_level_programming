@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <unistd.h>
 #include <string.h>
+#include <math.h>
 
 
 int _strlen(char *str);
