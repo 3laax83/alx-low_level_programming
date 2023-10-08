@@ -23,7 +23,7 @@ int *array_range(int min, int max)
 		return (NULL);
 
 	for (counter = min; counter <= max; counter++)
-		buffer[i] = counter;
+		buffer[counter] = counter;
 
 	return (buffer);
 }
