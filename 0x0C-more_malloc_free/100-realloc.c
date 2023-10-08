@@ -5,6 +5,7 @@
  * @ptr: pointer to array of memory block.
  * @old_size: the size to be changed.
  * @new_size: the new size of the block.
+ * Return: pointer to new memory block if success, NULL if failure.
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -17,12 +18,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (ptr == NULL)
 		return (malloc(old_size));
 
+	if (new_size < 1)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
 	newData = malloc(new_size);
 
 	if (newData == NULL)
 		return (NULL);
 
-	bzero(newData, new_size);
 	memcpy(newData, ptr, old_size);
 	free(ptr);
 
