@@ -22,7 +22,7 @@ int *array_range(int min, int max)
 	if (buffer == NULL)
 		return (NULL);
 
-	for (counter = 0; buffer[counter] <= max; counter++, min++)
+	for (counter = 0; counte <= (max - min); counter++, min++)
 		buffer[counter] = min;
 
 	return (buffer);
