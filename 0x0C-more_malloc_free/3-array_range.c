@@ -22,8 +22,8 @@ int *array_range(int min, int max)
 	if (buffer == 0)
 		return (NULL);
 
-	for (counter = min; counter <= max; counter++)
-		buffer[counter] = counter;
+	for (counter = 0; buffer[counter] <= max; counter++, min++)
+		buffer[counter] = min;
 
 	return (buffer);
 }
