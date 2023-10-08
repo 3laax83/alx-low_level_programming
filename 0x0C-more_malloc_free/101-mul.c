@@ -22,7 +22,7 @@ char *multiply(char *str1, char *str2)
 
 	for (len1--; len1 >= 0; len1--)
 	{
-		if(!isdigit(str1[len1]))
+		if (!isdigit(str1[len1]))
 		{
 			free(split);
 			printf("Error\n"), exit(98);
@@ -61,8 +61,9 @@ int main(int argc, char **argv)
 	int a = 0, b = 0, x;
 
 	if (argc != 3)
-		 printf("Error\n"), exit(98);
-
+	{
+		printf("Error\n"), exit(98);
+	}
 	x = strlen(argv[1]) + strlen(argv[2]);
 
 	split = multiply(argv[1], argv[2]);
