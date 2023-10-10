@@ -9,22 +9,17 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i = 0, j = 0, k;
+	int i = strlen(name), j = strlen(owner), k;
 	struct dog *canine;
 
 	if (!name || !age || !owner)
 		return (NULL);
 
-	for (;name[i] != 0;i++)
-		;
-	for (;owner[j] != 0; j++)
-		;
-
 	canine = malloc(sizeof(struct dog));
 	if (canine == NULL)
 		return (NULL);
 
-	canine->name = malloc((i + 1) * sizeof(char));
+	canine->name = malloc(i * sizeof(char));
 	if (canine->name == NULL)
 	{
 		free(canine);
@@ -35,7 +30,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	canine->age = age;
 
-	canine->owner = malloc(sizeof(char) * (j + 1));
+	canine->owner = malloc(j * sizeof(char));
 	if (canine->owner == NULL)
 	{
 		free(canine->owner);
