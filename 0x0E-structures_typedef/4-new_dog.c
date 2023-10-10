@@ -5,6 +5,7 @@
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
+ * Return: new dog struct
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -37,7 +38,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(canine);
 		return (NULL);
 	}
-	for(k = 0; k < j; k++)
+	for (k = 0; k < j; k++)
 		canine->owner[k] = owner[k];
 
 	return (canine);
