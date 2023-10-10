@@ -20,17 +20,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	while(owner[j++])
 		;
 
-	canine = malloc(sizeof(dog_t));
+	canine = malloc(sizeof(struct dog));
 	if (canine == NULL)
-	{
-		free(canine);
 		return (NULL);
-	}
 
 	canine->name = malloc(sizeof(name) * i);
 	if (canine->name == NULL)
 	{
-		free(canine->name);
+		free(canine);
 		return (NULL);
 	}
 	for (k = 0; k < i; k++)
