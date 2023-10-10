@@ -15,9 +15,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!name || !age || !owner)
 		return (NULL);
 
-	while(name[i++])
+	for (;name[i] != 0;i++)
 		;
-	while(owner[j++])
+	for (;owner[j] != 0; j++)
 		;
 
 	canine = malloc(sizeof(struct dog));
