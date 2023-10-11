@@ -17,7 +17,7 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 		};
-	int i = 5;
+	int i = 4;
 
 	while (i--)
 		if (strcmp(ops[i].op, s) == 0)

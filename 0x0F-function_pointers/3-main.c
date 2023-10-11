@@ -22,8 +22,6 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	opr = get_op_func(argv[2]);
 
-	if (num2 == 0 && (opr = "%" || opr == "/"))
-
 	if (opr == NULL)
 	{
 		printf("Error\n");
