@@ -25,7 +25,10 @@ int main(int argc, char *argv[])
 	for (i = 0; i < bytes; i++, adr++)
 	{
 		opcode = *(char *)adr;
-		printf("%.2x ", opcode);
+		printf("%.2x", opcode);
+		if (i == (bytes - 1))
+			continue;
+		printf(" ");
 	}
 
 	printf("\n");
