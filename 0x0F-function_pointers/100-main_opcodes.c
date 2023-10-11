@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int i, bytes;
 	int (*adr)(int, char **);
-	char opcode;
+	unsigned char opcode;
 
 	if (argc != 2)
 		printf("Error\n"), exit(1);
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < bytes; i++, adr++)
 	{
-		opcode = *(char *)adr;
+		opcode = *(unsigned char *)adr;
 		printf("%.2x", opcode);
 		if (i == (bytes - 1))
 			continue;
