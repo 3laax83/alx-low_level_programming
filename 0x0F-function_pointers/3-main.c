@@ -1,6 +1,13 @@
 #include "3-calc.h"
 
-int main (int argc, char *argv[])
+/**
+ * main - a program that performs simple operations.
+ * @argc: number of arguments
+ * @argv: pointer to list of arguments
+ * Return: Always 0
+ */
+
+int main(int argc, char *argv[])
 {
 	int num1, num2;
 	int (*opr)(int, int);
