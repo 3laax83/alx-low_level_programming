@@ -22,9 +22,9 @@ int main(int argc, char *argv[])
 	if (bytes < 0)
 		printf("Error\n"), exit(2);
 
-	for (i = 0; i < bytes; i++, adr++)
+	for (i = 0; i < bytes; i++)
 	{
-		opcode = *(unsigned char *)adr;
+		opcode = *(unsigned char *)adr[i];
 		printf("%.2x", opcode);
 		if (i == (bytes - 1))
 			continue;
