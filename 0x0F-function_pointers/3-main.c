@@ -10,7 +10,6 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2;
-	int (*opr)(int, int);
 
 	if (argc != 4)
 	{
@@ -27,7 +26,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	opr = get_op_func(argv[2]);
+	 int (*opr)(int, int) = get_op_func(argv[2]);
 
 	if (opr == NULL)
 	{
