@@ -29,6 +29,12 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
+	if (num3 == 0 && (argv[2] == "/" || argvv[2] == "%"))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
 	printf("%d\n", opr(num1, num2));
 	return (0);
 }
