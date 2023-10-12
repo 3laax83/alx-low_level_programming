@@ -3,8 +3,8 @@
 
 void print_all(const char * const format, ...)
 {
-	char *i = "cifs";
-	char *j;
+	int i = strlen(format) - 1;
+	char *j, *sep = ", ";
 	int k = 0;
 	va_list ptr;
 
@@ -12,25 +12,24 @@ void print_all(const char * const format, ...)
 
 	while (format && format[k])
 	{
+		if (k == i)
+			sep = "";
 		switch(format[k])
 		{
 			case 99:
-				printf("%c, ", va_arg(ptr, int));
+				printf("%c%s", va_arg(ptr, int), sep);
 				break;
-			case 10
-				printf("%d, ", va_arg(ptr, int));
+			case 105:
+				printf("%d%s", va_arg(ptr, int), sep);
 				break;
 			case 102:
-				 printf("%f, ", va_arg(ptr, double));
+				printf("%f%s", va_arg(ptr, double), sep);
 				break;
 			case 115:
 				j = va_arg(ptr, char*);
-				if (!j)
-					{
-						printf("(nil), ");
-						break;
-					}
-				printf("%s, ", j);
+				if (j == NULL)
+					j = "(nil)";
+				printf("%s%s", j, sep);
 				break;
 			default:
 				break;
