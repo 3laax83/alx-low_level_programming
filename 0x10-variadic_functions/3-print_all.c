@@ -29,12 +29,14 @@ void print_all(const char * const format, ...)
 			case 's':
 				{
 					i = va_arg(ptr, char *);
-					if (i == NULL)
-						printf("(nil)");
-					else
+					if (i)
 						printf("%s", i);
+					else
+						printf("(nil)");
 					break;
 				}
+			default:
+				break;
 		}
 		j++;
 		if (*j == 'c' || *j == 'i' || *j == 'f' || *j == 's')
