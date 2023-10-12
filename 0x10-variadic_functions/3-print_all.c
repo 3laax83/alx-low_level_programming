@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		i++;
-		if (*i == 99 || *i == 102 || *i == 105 || *i == 115)
+		if (*i != 0 && (*i == 99 || *i == 102 || *i == 105 || *i == 115))
 			printf(", ");
 	}
 	va_end(ptr);
