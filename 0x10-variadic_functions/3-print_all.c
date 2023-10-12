@@ -1,48 +1,42 @@
 #include "variadic_functions.h"
 
-/**
- * print_all - a function that prints anything.
- * @format: pointer to string that stores all formats.
- */
 
 void print_all(const char * const format, ...)
 {
-	char *i;
-	char *j = (char *) format;
+	char *i = (char *) format;
+	char *k;
 	va_list ptr;
 
 	va_start(ptr, format);
-	
-	while (*j != 0)
+
+	while (*i)
 	{
-		switch (*j)
+		switch(*i)
 		{
-			case 'c':
+			case 99:
 				printf("%c", va_arg(ptr, int));
 				break;
-			case 'i':
+			case 105:
 				printf("%d", va_arg(ptr, int));
 				break;
-			case 'f':
-				printf("%f", va_arg(ptr, double));
+			case 102:
+				 printf("%f", va_arg(ptr, double));
 				break;
-			case 's':
-				{
-					i = va_arg(ptr, char *);
-					if (!i)
+			case 115:
+				k = va_arg(ptr, char*);
+				if (k == NULL)
 					{
 						printf("(nil)");
 						break;
 					}
-					printf("%s", i);
-					break;
-				}
+				printf("%s", k);
+				break;
 			default:
 				break;
 		}
-		j++;
-		if (*j == 'c' || *j == 'i' || *j == 'f' || *j == 's')
-				printf(", ");
+		i++;
+		if (*i == 99 || *i == 102 || *i == 105 || *i == 115)
+			printf(", ");
 	}
 	va_end(ptr);
 	printf("\n");
