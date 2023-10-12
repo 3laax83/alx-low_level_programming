@@ -3,16 +3,18 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = strlen(format) - 1;
+	int i = 0;
 	char *j, *sep = ", ";
 	int k = 0;
 	va_list ptr;
 
 	va_start(ptr, format);
 
+	while (format && format[i])
+		i++;
 	while (format && format[k])
 	{
-		if (k == i)
+		if (k == i - 1)
 			sep = "";
 		switch(format[k])
 		{
