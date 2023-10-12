@@ -15,29 +15,27 @@ void print_all(const char * const format, ...)
 		switch(format[k])
 		{
 			case 99:
-				printf("%c", va_arg(ptr, int));
+				printf("%c, ", va_arg(ptr, int));
 				break;
-			case 105:
-				printf("%d", va_arg(ptr, int));
+			case 10
+				printf("%d, ", va_arg(ptr, int));
 				break;
 			case 102:
-				 printf("%f", va_arg(ptr, double));
+				 printf("%f, ", va_arg(ptr, double));
 				break;
 			case 115:
 				j = va_arg(ptr, char*);
 				if (!j)
 					{
-						printf("(nil)");
+						printf("(nil), ");
 						break;
 					}
-				printf("%s", j);
+				printf("%s, ", j);
 				break;
 			default:
 				break;
 		}
 		k++;
-		if (format[k] && strchr(i, format[k]) == 0)
-			printf(", ");
 	}
 	va_end(ptr);
 	printf("\n");
