@@ -7,15 +7,15 @@
 
 void print_all(const char * const format, ...)
 {
-	const char *i = format;
-	char *j;
+	char *i;
+	char *j = (char *) format;
 	va_list ptr;
 
 	va_start(ptr, format);
 	
-	while (*i)
+	while (*j != 0)
 	{
-		switch (*i)
+		switch (*j)
 		{
 			case 'c':
 				printf("%c", va_arg(ptr, int));
@@ -28,22 +28,20 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				{
-					j = va_arg(ptr, char*);
-					if (j == NULL)
-					{
+					i = va_arg(ptr, char *);
+					if (i == NULL)
 						printf("(nil)");
-						break;
-					}
-					printf("%s", j);
+					else
+						printf("%s", i);
 					break;
 				}
 			default:
 				break;
-
 		}
-		i++;
-		if (*i && (*i == 'c' || *i == 'i' || *i == 'f' || *i == 's'))
-			printf(", ");
+		j++;
+		if (*j == 'c' || *j == 'i' || *j == 'f' || *j == 's')
+				printf(", ");
+
 	}
 	va_end(ptr);
 	printf("\n");
