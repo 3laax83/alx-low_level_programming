@@ -36,7 +36,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		k++;
-		if (format[k] && strchr(i, format[k]))
+		if (format[k] && strchr(i, format[k]) == 0)
 			printf(", ");
 	}
 	va_end(ptr);
