@@ -8,13 +8,13 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	int sum = 0, i;
+	int sum = 0, i = (int16_t) n;
 
 	va_list ptr;
 
 	va_start(ptr, n);
 
-	for (i = 0; i < n; i++)
+	for (; i > 0; i--)
 		sum += va_arg(ptr, int);
 
 	va_end;
