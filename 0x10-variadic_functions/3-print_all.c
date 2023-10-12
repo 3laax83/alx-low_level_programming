@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		i++;
-		if (*i && strcmp(*i, f))
+		if (*i)
 			printf(", ");
 	}
 	va_end(ptr);
