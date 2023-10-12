@@ -35,13 +35,10 @@ void print_all(const char * const format, ...)
 						printf("%s", i);
 					break;
 				}
-			default:
-				break;
 		}
 		j++;
 		if (*j == 'c' || *j == 'i' || *j == 'f' || *j == 's')
 				printf(", ");
-
 	}
 	va_end(ptr);
 	printf("\n");
