@@ -1,5 +1,9 @@
 #include "variadic_functions.h"
 
+/**
+ * print_all - a function that prints anything.
+ * @format: pointer to formats included
+ */
 
 void print_all(const char * const format, ...)
 {
@@ -16,7 +20,7 @@ void print_all(const char * const format, ...)
 	{
 		if (k == i - 1)
 			sep = "";
-		switch(format[k])
+		switch (format[k])
 		{
 			case 99:
 				printf("%c%s", va_arg(ptr, int), sep);
