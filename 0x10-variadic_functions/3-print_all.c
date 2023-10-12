@@ -24,7 +24,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 115:
 				k = va_arg(ptr, char*);
-				if (k == NULL)
+				if (!k)
 					{
 						printf("(nil)");
 						break;
