@@ -10,5 +10,8 @@ void free_list(list_t *head)
 	list_s *tmp;
 
 	for (tmp = head; tmp; tmp = tmp->next)
+	{
+		free(tmp->str);
 		free(tmp);
+	}
 }
