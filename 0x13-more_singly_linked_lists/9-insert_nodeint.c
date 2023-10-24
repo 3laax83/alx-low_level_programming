@@ -18,7 +18,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (head == NULL || tmp == NULL)
 		return (NULL);
 
-	tm->n = n;
+	tmp->n = n;
 	reader = *head;
 
 	if (idx == 0)
@@ -37,7 +37,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		}
 	}
 
-	if (idex > i)
+	if (idx > i)
 		return (NULL);
 
 	return (tmp);
