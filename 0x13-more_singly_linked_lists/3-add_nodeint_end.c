@@ -22,7 +22,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	if (*head)
 	{
 		reader = *head;
-		for (; reader->next != NULL; reader = reader->head)
+		for (; reader->next != NULL; reader = reader->next)
 			;
 		reader->next = tmp;
 	}
