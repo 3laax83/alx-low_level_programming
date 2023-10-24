@@ -9,10 +9,10 @@ void free_listint(listint_t *head)
 {
 	listint_t *reader;
 
-	do
+	while (head)
 	{
 		reader = head->next;
 		free(head);
 		head = reader;
-	} while (head);
+	}
 }
