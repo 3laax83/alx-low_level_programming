@@ -1,16 +1,4 @@
 #include "main.h"
-
-char *itoa(int val, int base)
-{
-	static char buf[32] = {0};
-	int i = 30;
-
-	for (; val && i; --i, val /= base)
-		buf[i] = "0123456789abcdef"[val % base];
-
-	return (&buf[i+1]);
-}
-
 /**
  * print_binary - a function that prints the binary representation of a
  * number.
@@ -19,16 +7,20 @@ char *itoa(int val, int base)
 
 void print_binary(unsigned long int n)
 {
-	char *s = itoa(n, 2);
+	int i = 0;
+	double mod;
+	char buf[32] = {0};
 
-	if (n == 0)
-		_putchar('0');
-	else
+	do
 	{
-		do
-		{
-			_putchar(*s);
-			s++;
-		} while (*s);
-	}
+		mod = (double) (n * 0.5) - (int) (n * 0.5);
+		if (mod == 0)
+			buf[i++] = '0';
+		else
+			buf[i++] = '1';
+		n = (int) (n * 0.5);
+	} while (n >= 1);
+
+	for (; i >= 0; i--)
+		_putchar(buf[i]);
 }
