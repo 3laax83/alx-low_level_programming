@@ -1,17 +1,5 @@
 #include "main.h"
 #include <string.h>
-
-char *itoa(int val, int base)
-{
-	static char buf[32] = {0};
-	int i = 30;
-
-	for (; val && i; --i, val /= base)
-		buf[i] = "0123456789abcdef"[val % base];
-
-	return (&buf[i + 1]);
-}
-
 /**
  * get_bit - a function that returns the value of a bit at a given index.
  * @n : number
@@ -21,10 +9,9 @@ char *itoa(int val, int base)
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	char *s = itoa(n, 2);
-
-	if (s[strlen(s) - index - 1])
-		return (s[index] - '0');
-	else
+	if (index > 8 * sizeof(unsigned long int) - 1)
 		return (-1);
+	if (1 << index == n & (1 << index))
+		return (1);
+	return (0);
 }
