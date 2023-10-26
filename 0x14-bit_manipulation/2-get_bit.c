@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 char *itoa(int val, int base)
 {
@@ -22,7 +23,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	char *s = itoa(n, 2);
 
-	if (s[index])
+	if (s[strlen(s) - index - 1])
 		return (s[index] - '0');
 	else
 		return (-1);
