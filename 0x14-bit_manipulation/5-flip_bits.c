@@ -20,7 +20,8 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		current = xor >> i;
 		if (current & 1)
 			counter++;
-	} while (--i > 0);
+		i--;
+	} while (i > 0);
 
 	return (count);
 }
