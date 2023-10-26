@@ -12,12 +12,16 @@ void print_binary(unsigned long int n)
 
 	intn = (n * 0.5);
 	if (n > 1)
-		print_binary(n * 0.5);
-	mod = (n * 0.5) - intn;
+		print_binary(intn);
+	mod = (n * 0.5) - (int) (n * 0.5);
 	if (mod == 0)
+	{
 		_putchar('0');
-	else if (mod > 0)
-		_putchar('1');
-	else
 		return;
+	}
+	else
+	{
+		_putchar('1');
+		return;
+	}
 }
