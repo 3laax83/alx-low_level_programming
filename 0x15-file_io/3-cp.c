@@ -43,10 +43,10 @@ int main(int argc, char *argv[])
 
 	while (bufsize == 1024)
 	{
-		bufsize == read(source, buf, sizeof(buf));
+		bufsize = read(source, buf, sizeof(buf));
 		if (bufsize == -1)
 			ioCheck(-1, -1, argv[1], 'O');
-		written = (des, buf, bufsize);
+		written = write(des, buf, bufsize);
 		if (written == -1)
 			ioCheck(-1, -1, argv[2], 'W');
 	}
