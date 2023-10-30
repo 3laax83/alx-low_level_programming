@@ -1,5 +1,14 @@
 #include "main.h"
 
+
+/**
+ * ioCheck - checks if main can open a file
+ * @status: self-explanatory
+ * @file: file descriptor
+ * @filename: self-explanatory
+ * @mode: close/open
+ */
+
 void ioCheck(int status, int file, char *filename, char mode)
 {
 	if (status == -1)
@@ -23,6 +32,12 @@ void ioCheck(int status, int file, char *filename, char mode)
 	}
 }
 
+/**
+ * main - a program that copies the content of a file to another file.
+ * @argc: number of arguments
+ * @argv: list of arguments
+ * Return: 0
+ */
 
 int main(int argc, char *argv[])
 {
