@@ -2,7 +2,8 @@
 #include "ref1.c"
 
 /**
- * main - a program that displays the information contained in the ELF header at the start of an ELF file.
+ * main - a program that displays the information contained in the ELF
+ * header at the start of an ELF file.
  * @argc: number of arguments
  * @argv: list of arguments
  * Return: 0
