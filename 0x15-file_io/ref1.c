@@ -77,7 +77,17 @@ void printVersion(unsigned char *e_ident)
 {
 	printf("  Version:                           %d", e_ident[EI_VERSION]);
 
-	if (e_ident[EI_VERSION] == 1)
+	switch (e_ident[EI_VERSION])
+	{
+		case EV_NONE:
+			printf(" (invalid)\n");
+			break;
+		case EV_CURRENT:
+			printf(" (current)\n");
+			break;
+	}
+
+	if (e_ident[EI_VERSION] == EV_CURRENT)
 		printf(" (current)");
 	printf("\n");
 }
