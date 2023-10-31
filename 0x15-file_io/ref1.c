@@ -84,7 +84,6 @@ void printVersion(unsigned char *e_ident)
 			break;
 		default:
 			printf("\n");
-			break;
 	}
 }
 
