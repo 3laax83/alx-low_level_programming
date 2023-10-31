@@ -122,6 +122,12 @@ void printOSABI(unsigned char *e_ident)
 		case ELFOSABI_ARM:
 			printf("ARM\n");
 			break;
+		case ELFOSABI_MODESTO:
+			printf("Novell - Modesto\n");
+			break;
+		case ELFOSABI_OPENBSD:
+			printf("UNIX - OpenBSD\n");
+			break;
 		case ELFOSABI_STANDALONE:
 			printf("Standalone App\n");
 			break;
