@@ -77,12 +77,16 @@ void printVersion(unsigned char *e_ident)
 {
 	printf("  Version:                           %d", e_ident[EI_VERSION]);
 
-	if (e_ident[EI_VERSION] == EV_CURRENT)
-		printf(" (current)\n");
-	else if (e_ident[EI_VERSION] == EV_NONE)
-		printf(" (invalid)\n");
-	else
-		printf(" <unknown>\n");
+	switch (e_ident[EI_VERSION])
+	{
+		case EV_CURRENT:
+			printf(" (current)");
+			break;
+		case EV_NONE:
+			printf("%s", "");
+			break;
+	}
+	printf("\n");
 }
 
 void printOSABI(unsigned char *e_ident)
