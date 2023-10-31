@@ -78,9 +78,8 @@ void printVersion(unsigned char *e_ident)
 	printf("  Version:                           %d", e_ident[EI_VERSION]);
 
 	if (e_ident[EI_VERSION] == EV_CURRENT)
-		printf(" (current)\n");
-	else
-		printf("\n");
+		printf(" (current)");
+	printf("\n");
 }
 
 void printOSABI(unsigned char *e_ident)
