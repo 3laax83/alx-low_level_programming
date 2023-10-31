@@ -80,12 +80,13 @@ void printVersion(unsigned char *e_ident)
 	switch (e_ident[EI_VERSION])
 	{
 		case EV_NONE:
-			printf(" (invalid)\n");
+			printf(" (invalid)");
 			break;
 		case EV_CURRENT:
-			printf(" (current)\n");
+			printf(" (current)");
 			break;
 	}
+	printf("\n");
 }
 
 void printOSABI(unsigned char *e_ident)
