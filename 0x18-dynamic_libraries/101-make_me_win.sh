@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -O -P /tmp https://github.com/aeiedamo/alx-low_level_programming/blob/main/0x18-dynamic_libraries/neogm.so
-export LD_PRELOAD=/tmp/neogm.so
+wget -P /tmp https://github.com/sidneyriffic/holbertonschool-low_level_programming/raw/master/0x17-dynamic_libraries/putshack.so
+export LD_PRELOAD=/tmp/putshack.so
