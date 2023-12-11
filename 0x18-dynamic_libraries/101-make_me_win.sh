@@ -1,3 +1,3 @@
 #!/bin/bash
-cp ./neogm.so /tmp/neogm.so
+wget -P /tmp https://github.com/aeiedamo/alx-low_level_programming/blob/main/0x18-dynamic_libraries/neogm.so
 export LD_PRELOAD=/tmp/neogm.so
