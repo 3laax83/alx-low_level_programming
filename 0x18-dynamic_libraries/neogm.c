@@ -11,7 +11,7 @@ int rand()
         if (gm == 0)
                 return (8);
         if (gm == 1)
-                return (9);
+                return (8);
         if (gm == 2)
                 return (7);
         if (gm == 3)
