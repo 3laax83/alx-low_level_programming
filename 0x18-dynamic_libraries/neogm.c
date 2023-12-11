@@ -4,23 +4,23 @@
 
 int rand()
 {
-        static int gm = 0;
-
+        static int gm = -1;
+        ++gm;
         switch (gm)
         {
                 case 0:
-                        return (9);
+                        return (8);
                 case 1:
                         return (8);
                 case 2:
-                        return (10);
+                        return (7);
                 case 3:
-                        return (24);
+                        return (10);
                 case 4:
-                        return (75);
+                        return (23);
                 case 5:
-                        return (9);
+                        return (74);
                 default:
-                        return (gm);
+                        return (gm % 75);
         }
 }
