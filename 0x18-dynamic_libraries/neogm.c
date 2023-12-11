@@ -7,7 +7,7 @@ int rand()
 {
         static int gm = -1;
 
-        ++gm;
+        gm++;
         switch (gm)
         {
                 case 0:
@@ -22,6 +22,6 @@ int rand()
                 case 5:
                         return (74);
                 default:
-                        return (gm);
+                        return (gm * gm % 30000);
         }
 }
