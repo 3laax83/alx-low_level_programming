@@ -13,7 +13,9 @@ hash_node_t *node_create(hash_node_t *end)
 		return (NULL);
 	new->key = NULL;
 	new->value = NULL;
-	new->next = end;
+	if (end)
+		end->next = new;
+	new->next = NULL;
 	return (new);
 }
 
