@@ -5,17 +5,17 @@
  * @end: the last node in a hash table
  * Return: new node if succeed, null otherwise
 */
-hash_node_t *node_create(hash_node_t *end)
+hash_node_t *node_create(hash_node_t *end, const char *key, char *value)
 {
 	hash_node_t *new = malloc(sizeof(hash_node_t));
 
 	if (!new)
 		return (NULL);
-	new->key = NULL;
-	new->value = NULL;
+	new->key = strdup(key);
+	new->value = strdup(value);
+	new->next = NULL;
 	if (end)
 		end->next = new;
-	new->next = NULL;
 	return (new);
 }
 
@@ -32,7 +32,7 @@ hash_node_t *node_update(hash_node_t *target, const char *key, char *value)
 
 	for (; tmp; tmp = tmp->next)
 	{
-		if (!strcmp(tmp->key, key))
+		if (strcmp(tmp->key, key) == 0)
 		{
 			free(tmp->value);
 			tmp->value = value;
@@ -41,7 +41,7 @@ hash_node_t *node_update(hash_node_t *target, const char *key, char *value)
 	}
 
 	tmp = target;
-	target = node_create(target);
+	target = node_create(target, key, value);
 	if (!target)
 	{
 		target = tmp;

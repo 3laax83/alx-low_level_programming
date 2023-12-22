@@ -23,7 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	node = ht->array[i];
 	if (!node)
-		node = node_create(NULL);
+		node = node_create(NULL, key, str);
 	if (node->key)
 	{
 		ht->array[i] = node_update(node, key, str);
