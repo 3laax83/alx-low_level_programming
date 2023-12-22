@@ -47,7 +47,7 @@ hash_node_t *node_update(hash_node_t *target, const char *key, char *value)
 		target = tmp;
 		return (target);
 	}
-	strcpy(target->key, key);
+	target->key = strdup(key);
 	target->value = value;
 	return (target);
 }
