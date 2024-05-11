@@ -33,13 +33,13 @@ int binary_search(int *array, size_t size, int value) {
 
   low = 0, high = size - 1;
 
-  for (i = size / 2; low <= high; i = (low + high) / 2) {
+  for (i = (high) / 2; low <= high; i = (low + high) / 2) {
     printf("Searching in array: ");
     print_array(array, low, high);
     if (value > *(array + i))
-      low = i;
+      low = i + 1;
     else if (value < *(array + i))
-      high = i;
+      high = i - 1;
     else
       return (i);
   }
