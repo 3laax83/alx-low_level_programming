@@ -1,57 +1,49 @@
-#include "1-binary.c"
 #include "search_algos.h"
 
 /**
- * advanbin - to help advanced_binary
- * @array: pointer to array
- * @size: size of array
+ * _advanced_binary - performs advanced binary search
+ * @array: the integer array
+ * @size: its size
  * @value: value to search for
- * Return: pointer to value found, NULL otherwise
+ *
+ * Return: the index found or -1
  */
-
-int *advanbin(int *array, size_t size, int value)
+int *_advanced_binary(int *array, size_t size, int value)
 {
-	size_t i;
+	size_t i = 0;
 
-	if (!array || size < 1)
+	if (!size || !array)
 		return (NULL);
-
-	printf("Searching in array: ");
-	print_array(array, 0, size - 1);
+	for (printf("Searching in array: "); i < size; i++)
+		printf("%d%s", array[i], i + 1 == size ? "\n" : ", ");
 
 	i = (size - 1) / 2;
-
-	if (value > *(array + i))
-		return (advanbin(array + i + 1, size - i - 1, value));
-	else if (value < *(array + i))
-		return (advanbin(array, i, value));
-
-	if (i)
-		return (advanbin(array, i + 1, value));
-	return (array + i);
+	if (array[i] == value)
+	{
+		if (i)
+			return (_advanced_binary(array, i + 1, value));
+		return (array + i);
+	}
+	else if (array[i] > value)
+		return (_advanced_binary(array, i + 1, value));
+	else
+		return (_advanced_binary(array + i + 1, size - i - 1, value));
 }
 
 /**
- * advanced_binary - You may have noticed that the basic binary search does
- * not necessarily return the index of the first value in the array (if this
- * value appears more than once in the array). In this exercise, you’ll have
- * to solve this problem.
- * @array: pointer to array
- * @size: size of array
+ * advanced_binary - performs advanced binary search
+ * @array: the integer array
+ * @size: its size
  * @value: value to search for
- * Return: index of value if found, -1 otherwise
+ *
+ * Return: the index found or -1
  */
-
 int advanced_binary(int *array, size_t size, int value)
 {
-	int *i = NULL;
+	int *a = _advanced_binary(array, size, value);
 
-	if (!array || size < 2)
+	if (!a)
 		return (-1);
-
-	i = advanbin(array, size, value);
-
-	if (i)
-		return (i - array);
-	return (-1);
+	else
+		return (a - array);
 }
